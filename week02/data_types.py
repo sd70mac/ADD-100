@@ -13,6 +13,12 @@ ASSIGNMENT REQUIREMENTS (DO NOT DELETE)
 """
 
 ## Testing
-
+item_name = "EMD F40PH"  # String variable
 quantity = 2  # Integer variable
-# print(f"")
+price = 1500000  # Float variable
+is_available = True  # Boolean variable
+print(f"\n")
+print(f" item_name: {item_name}, \t")
+print(f" quantity: {quantity}, \t")
+print(f" price: {price}, \t")
+print(f" is_available: {is_available}, \t")
