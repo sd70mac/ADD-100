@@ -18,7 +18,7 @@ quantity = 2  # Integer variable
 price = 1500000  # Float variable
 is_available = True  # Boolean variable
 print(f"\n")
-print(f" item_name: {item_name}, \t")
-print(f" quantity: {quantity}, \t")
-print(f" price: {price}, \t")
-print(f" is_available: {is_available}, \t")
+print(f" item_name: {item_name}, \n")
+print(f" quantity: {quantity}, \n")
+print(f" price: {price}, \n")
+print(f" is_available: {is_available}, \n")
