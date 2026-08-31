@@ -13,3 +13,6 @@ ASSIGNMENT REQUIREMENTS (DO NOT DELETE)
 """
 
 ## Testing
+
+quantity = 2  # Integer variable
+# print(f"")

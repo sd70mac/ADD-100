@@ -11,12 +11,20 @@ ASSIGNMENT REQUIREMENTS
 -----------------------------------------------------------------------
 """
 
+"""This program is a simple Mad Libs game that takes user input for names, an action verb, and a dessert, and then incorporates those inputs into a fun song format. 
+It uses f-strings to format the output and includes escape sequences for line breaks.  
+Lyrics are from the Disney version of Mambo No. 5. 
+It also includes comments to explain each step of the process."""
+
+
+# In the section directly below we ask the user for input to fill in the blanks of our Mad Libs game.
 name1 = input("Please enter a first name: ")
 name2 = input("Please enter another first name: ")
 name3 = input("Please enter a third first name: ")
 verb1 = input("Please enter an action verb: ")
 dessert1 = input("Please enter the name of a dessert: ")
 
+# In this section, we use f-strings to format the output of our Mad Libs game, incorporating the user inputs into the lyrics of Mambo No. 5.
 print(f"\nLadies and gentlemen, this is Mambo No. 5\n")
 print(f"One, two, three, four, five")
 print(f"Everybody in the car so come on let's {verb1}")
