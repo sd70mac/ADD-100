@@ -12,7 +12,6 @@ ASSIGNMENT REQUIREMENTS (DO NOT DELETE)
 -----------------------------------------------------------------------
 """
 
-## Testing
 item_name = "EMD F40PH"  # String variable
 quantity = 2  # Integer variable
 price = 1500000  # Float variable
