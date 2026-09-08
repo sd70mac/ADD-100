@@ -1,7 +1,7 @@
 """
 -----------------------------------------------------------------------
 ASSIGNMENT: 3B - The Buffet Calculator (Daily Specials)
-DATE: [Insert Date]
+DATE: Started on 2026-09-02
 FILE: buffet.py
 -----------------------------------------------------------------------
 """
