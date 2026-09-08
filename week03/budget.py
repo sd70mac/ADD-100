@@ -13,3 +13,6 @@ ASSIGNMENT REQUIREMENTS
 
 gross_income = float(input("Enter Monthly Gross Income: $"))
 rent = float(input("Enter Monthly Rent/Mortgage Payment: $"))
+utilities = float(input("Enter Monthly Utilities Payment: $"))
+groceries = float(input("Enter Monthly Groceries Payment: $"))
+transportation = float(input("Enter Monthly Transportation Payment: $"))
