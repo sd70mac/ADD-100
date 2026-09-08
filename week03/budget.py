@@ -12,3 +12,4 @@ ASSIGNMENT REQUIREMENTS
 """
 
 gross_income = float(input("Enter Monthly Gross Income: $"))
+rent = float(input("Enter Monthly Rent/Mortgage Payment: $"))
