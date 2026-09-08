@@ -18,10 +18,12 @@ groceries = float(input("Enter Monthly Groceries Payment: $"))
 transportation = float(input("Enter Monthly Transportation Payment: $"))
 entertainment = float(input("Enter Monthly Entertainment Payment: $"))
 
+# Calculate Total Expenses, Remaining Balance, and Percentage of Income Spent
 total_expenses = rent + utilities + groceries + transportation + entertainment
 remaining_balance = gross_income - total_expenses
 percentage_spent = total_expenses / gross_income
 
+# Output the results formatted to 2 decimal places
 print(f"Total Expenses: ${total_expenses:,.2f}")
 print(f"Remaining Balance: ${remaining_balance:,.2f}")
 print(f"Percentage of Income Spent: {percentage_spent:.2%}")
