@@ -24,6 +24,7 @@ remaining_balance = gross_income - total_expenses
 percentage_spent = total_expenses / gross_income
 
 # Output the results formatted to 2 decimal places
-print(f"Total Expenses: ${total_expenses:,.2f}")
-print(f"Remaining Balance: ${remaining_balance:,.2f}")
-print(f"Percentage of Income Spent: {percentage_spent:.2%}")
+print("\n")
+print(f"{'Total Expenses:':<30} ${total_expenses:>8,.2f}")
+print(f"{'Remaining Balance:':<30} ${remaining_balance:>8,.2f}")
+print(f"{'Percentage of Income Spent:':<30} {percentage_spent:>10.2%}")
