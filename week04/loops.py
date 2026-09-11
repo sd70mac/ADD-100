@@ -19,7 +19,7 @@ keep_nagging = True
 while keep_nagging:
     print("Are we there yet?")
     user_input = input("Type 'yes' to stop nagging: ")
-    if user_input == "yes":
+    if user_input.lower() == "yes":
         keep_nagging = False
 
 ## Task 2: For Loop (99 Bottles of Beer)
@@ -29,3 +29,5 @@ for i in range(bottles, 0, -1):
         print(f"{i} bottle of beer on the wall!")
     else:
         print(f"{i} bottles of beer on the wall!")
+        print(f"{i} bottles of beer!")
+        print("Take one down, pass it around!")
