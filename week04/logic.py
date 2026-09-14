@@ -17,7 +17,7 @@ num2 = int(input("Enter the second integer: "))
 # Logical Checks
 if num1 > 0 and num2 > 0:
     print("Both numbers are greater than 0.")
-elif num1 > 100 and num2 > 100:
+if num1 > 100 and num2 > 100:
     print("Both numbers are greater than 100.")
 elif num1 % 2 == 0 or num2 % 2 == 0:
     print("At least one of the numbers is even.")
