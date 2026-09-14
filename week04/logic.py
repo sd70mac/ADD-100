@@ -23,7 +23,7 @@ elif num1 % 2 == 0 or num2 % 2 == 0:
     print("At least one of the numbers is even.")
 elif num1 < 100 or num2 < 100:
     print("At least one of the numbers is less than 100.")
-if num1 != num2:
+if not num1 == num2:
     print("The numbers are not equal.")
 else:
     print("The numbers are equal.")
