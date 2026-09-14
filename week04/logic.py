@@ -25,6 +25,7 @@ elif num1 < 100 or num2 < 100:
     print("At least one of the numbers is less than 100.")
 if num1 != num2:
     print("The numbers are not equal.")
-    else: print("The numbers are equal.")
+else:
+    print("The numbers are equal.")
 if num1 != 0 and num2 != 0:
     print("Neither number is zero.")
