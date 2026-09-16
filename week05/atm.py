@@ -11,20 +11,22 @@ ASSIGNMENT REQUIREMENTS
 [ ] 7. Upload to GitHub and paste the link below.
 -----------------------------------------------------------------------
 """
+
 ## ATM Menu
 ## Based on Create, Read, Update, Delete principles
+balance = 1000.00
 choice = 1
 while choice > 0 and choice < 4:
     print(f" 1. View Balance")
-    print(f" 2. Withdrawl")
+    print(f" 2. Withdrawal")
     print(f" 3. Deposit")
     print(f" 4. Exit")
     choice = int(input("Please enter a number to make your choice:"))
     match choice:
         case 1:
-            print("View Balance")
+            print(f"Your balance is ${balance:.2f}")
         case 2:
-            print("Withdrawl")
+            print(f"How much do you want to withdraw?")
         case 3:
             print("Deposit")
         case 4:
