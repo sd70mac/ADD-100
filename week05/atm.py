@@ -1,3 +1,16 @@
+"""
+-----------------------------------------------------------------------
+ASSIGNMENT REQUIREMENTS
+-----------------------------------------------------------------------
+[ ] 1. Header Docstring included with assignment info.
+[ ] 2. ATM runs in a "while True" loop to remain awake.
+[ ] 3. Main menu uses match-case logic for selections.
+[ ] 4. Inputs are validated (e.g., .isdigit()) to prevent crashes (include try except)
+[ ] 5. Logic prevents overdrafts and negative deposits.
+[ ] 6. All currency is formatted to two decimal places (:.2f).
+[ ] 7. Upload to GitHub and paste the link below.
+-----------------------------------------------------------------------
+"""
 ## ATM Menu
 ## Based on Create, Read, Update, Delete principles
 choice = 1
