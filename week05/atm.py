@@ -16,6 +16,7 @@ ASSIGNMENT REQUIREMENTS
 ## Based on Create, Read, Update, Delete principles
 balance = 1000.00
 choice = 1
+amount = 0.00
 while choice > 0 and choice < 4:
     print(f" 1. View Balance")
     print(f" 2. Withdrawal")
@@ -26,8 +27,28 @@ while choice > 0 and choice < 4:
         case 1:
             print(f"Your balance is ${balance:.2f}")
         case 2:
-            print(f"How much do you want to withdraw?")
+            while True:
+                try:
+                    print("How much do you want to withdraw?")
+                    amount = float(input("$"))
+                    if amount >= 0:
+                        balance -= amount
+                        break  # The input is valid.
+                    else:
+                        print("Error! Invalid amount.")
+                except ValueError:
+                    print("Error! Please enter a number.")
         case 3:
-            print("Deposit")
+            while True:
+                try:
+                    print("How much do you want to deposit?")
+                    amount = float(input("$"))
+                    if amount >= 0:
+                        balance += amount
+                        break  # The input is valid.
+                    else:
+                        print("Error! Invalid amount.")
+                except ValueError:
+                    print("Error! Please enter a number.")
         case 4:
-            print("Exit")
+            print("Exiting, goodbye!")
