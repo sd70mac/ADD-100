@@ -11,16 +11,41 @@ ASSIGNMENT 5A: INPUT VALIDATION
 -----------------------------------------------------------------------
 """
 
-## First Name & Last Name: Cannot be blank.
-first_name = input("Enter First Name: ")
-while first_name == "":
-    print("Error: Name cannot be blank.")
-    first_name = input("Please enter First Name: ")
-last_name = input("Enter Last Name: ")
-while last_name == "":
-    print("Error: Name cannot be blank.")
-    last_name = input("Please enter Last Name: ")
+try:
+    ## First Name & Last Name: Cannot be blank.
+    first_name = input("Enter First Name: ")
+    while first_name == "":
+        print("Error: Name cannot be blank.")
+        first_name = input("Please enter First Name: ")
+    last_name = input("Enter Last Name: ")
+    while last_name == "":
+        print("Error: Name cannot be blank.")
+        last_name = input("Please enter Last Name: ")
 
-## Age: Must be a number; also check whether they are older or younger than 21 to determine whether they get a drink ticket.
-## Phone Number: Cannot be blank.
-## Ticket Count: Must be a valid integer > 0 (Crash-Proof!).
+    ## Age: Must be a number; also check whether they are older or younger than 21 to determine whether they get a drink ticket.
+    age = input("Enter your Age: ")
+    while age == "":
+        print("Error: Age cannot be blank.")
+        age = input("Please enter your Age: ")
+        while not age.isdigit():
+            print("Error: Age must be a number.")
+            age = input("Please enter your Age: ")
+    if int(age) >= 21:
+        print("You are eligible for a drink ticket.")
+
+    ## Phone Number: Cannot be blank.
+    phone_number = input("Enter Phone Number: ")
+    while phone_number == "":
+        print("Error: Phone Number cannot be blank.")
+        phone_number = input("Please enter your Phone Number: ")
+
+    ## Ticket Count: Must be a valid integer > 0 (Crash-Proof!).
+    ticket_count = input("Enter Ticket Count: ")
+    while ticket_count == "":
+        print("Error: Ticket Count cannot be blank.")
+        ticket_count = input("Please enter your Ticket Count: ")
+        while not ticket_count.isdigit() or int(ticket_count) <= 0:
+            print("Error: Ticket Count must be a valid integer greater than 0.")
+            ticket_count = input("Please enter your Ticket Count: ")
+except ValueError:
+    print(f"Something else went wrong.")
