@@ -31,7 +31,7 @@ while choice > 0 and choice < 4:
                 try:
                     print("How much do you want to withdraw?")
                     amount = float(input("$"))
-                    if amount >= 0:
+                    if amount >= 0 and amount <= balance:
                         balance -= amount
                         break  # The input is valid.
                     else:
