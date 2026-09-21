@@ -38,6 +38,8 @@ while choice > 0 and choice < 4:
                         print("Error! Invalid amount.")
                 except ValueError:
                     print("Error! Please enter a number.")
+                except Exception as e:
+                    print(f"An unexpected error occurred: {e}")
         case 3:
             while True:
                 try:
@@ -50,5 +52,7 @@ while choice > 0 and choice < 4:
                         print("Error! Invalid amount.")
                 except ValueError:
                     print("Error! Please enter a number.")
+                except Exception as e:
+                    print(f"An unexpected error occurred: {e}")
         case 4:
             print("Exiting, goodbye!")
