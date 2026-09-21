@@ -33,7 +33,7 @@ while choice > 0 and choice < 4:
                     amount = float(input("$"))
                     if amount >= 0 and amount <= balance:
                         balance -= amount
-                        break  # The input is valid.
+                        break  # The input is valid.  Break takes us out of the loop, continue restarts from the beginning.
                     else:
                         print("Error! Invalid amount.")
                 except ValueError:
