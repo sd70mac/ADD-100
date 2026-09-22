@@ -21,7 +21,8 @@ while is_running:
     print(f" 1. View Balance")
     print(f" 2. Deposit")
     print(f" 3. Withdrawal")
-    print(f" 4. Exit")
+    print(f" 4. Transfer")
+    print(f" 5. Exit")
     choice = int(input("Please enter a number to make your choice:"))
     match choice:
         case 1:
@@ -56,7 +57,19 @@ while is_running:
                 except Exception as e:
                     print(f"An unexpected error occurred: {e}")
         case 4:
-            
+            while True:
+                try:
+                    print("How much do you want to transfer?")
+                    amount = float(input("$"))
+                    if amount >= 0 and amount <= balance:
+                        balance -= amount
+                        break  # The input is valid.
+                    else:
+                        print("Error! Invalid amount.")
+                except ValueError:
+                    print("Error! Please enter a number.")
+                except Exception as e:
+                    print(f"An unexpected error occurred: {e}")
         case 5:
             print("Exiting, goodbye!")
             is_running = False
