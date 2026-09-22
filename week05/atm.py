@@ -19,14 +19,29 @@ amount = 0.00
 is_running = True
 while is_running:
     print(f" 1. View Balance")
-    print(f" 2. Withdrawal")
-    print(f" 3. Deposit")
+    print(f" 2. Deposit")
+    print(f" 3. Withdrawal")
     print(f" 4. Exit")
     choice = int(input("Please enter a number to make your choice:"))
     match choice:
         case 1:
             print(f"Your balance is ${balance:.2f}")
         case 2:
+            while True:
+                try:
+                    print("How much do you want to deposit?")
+                    amount = float(input("$"))
+                    if amount >= 0:
+                        balance += amount
+                        break  # The input is valid.
+                    else:
+                        print("Error! Invalid amount.")
+                        continue  # The input is invalid. Continue the loop from the top.
+                except ValueError:
+                    print("Error! Please enter a number.")
+                except Exception as e:
+                    print(f"An unexpected error occurred: {e}")
+        case 3:
             while True:
                 try:
                     print("How much do you want to withdraw?")
@@ -40,21 +55,11 @@ while is_running:
                     print("Error! Please enter a number.")
                 except Exception as e:
                     print(f"An unexpected error occurred: {e}")
-        case 3:
-            while True:
-                try:
-                    print("How much do you want to deposit?")
-                    amount = float(input("$"))
-                    if amount >= 0:
-                        balance += amount
-                        break  # The input is valid.
-                    else:
-                        print("Error! Invalid amount.")
-                except ValueError:
-                    print("Error! Please enter a number.")
-                except Exception as e:
-                    print(f"An unexpected error occurred: {e}")
         case 4:
+            
+        case 5:
             print("Exiting, goodbye!")
             is_running = False
             break  # We are done.
+        case _:
+            print("Invalid Selection")
