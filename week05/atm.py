@@ -33,7 +33,7 @@ while is_running:
                     amount = float(input("$"))
                     if amount >= 0 and amount <= balance:
                         balance -= amount
-                        break  # The input is valid.  Break takes us out of the loop, continue restarts from the beginning.
+                        break  # The input is valid.
                     else:
                         print("Error! Invalid amount.")
                 except ValueError:
@@ -47,7 +47,6 @@ while is_running:
                     amount = float(input("$"))
                     if amount >= 0:
                         balance += amount
-
                         break  # The input is valid.
                     else:
                         print("Error! Invalid amount.")
