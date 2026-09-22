@@ -23,7 +23,11 @@ while is_running:
     print(f" 3. Withdrawal")
     print(f" 4. Transfer")
     print(f" 5. Exit")
-    choice = int(input("Please enter a number to make your choice:"))
+    try:
+        choice = int(input("Please enter a number to make your choice:"))
+    except ValueError:
+        print("Error! Please enter a valid number.")
+        continue
     match choice:
         case 1:
             print(f"Your balance is ${balance:.2f}")
