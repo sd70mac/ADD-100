@@ -15,7 +15,6 @@ ASSIGNMENT REQUIREMENTS
 ## ATM Menu
 ## Based on Create, Read, Update, Delete principles
 balance = 1000.00
-choice = 1
 amount = 0.00
 is_running = True
 while is_running:
