@@ -17,7 +17,8 @@ ASSIGNMENT REQUIREMENTS
 balance = 1000.00
 choice = 1
 amount = 0.00
-while choice > 0 and choice < 4:
+is_running = True
+while is_running:
     print(f" 1. View Balance")
     print(f" 2. Withdrawal")
     print(f" 3. Deposit")
@@ -47,6 +48,7 @@ while choice > 0 and choice < 4:
                     amount = float(input("$"))
                     if amount >= 0:
                         balance += amount
+
                         break  # The input is valid.
                     else:
                         print("Error! Invalid amount.")
@@ -56,3 +58,5 @@ while choice > 0 and choice < 4:
                     print(f"An unexpected error occurred: {e}")
         case 4:
             print("Exiting, goodbye!")
+            is_running = False
+            break  # We are done.
