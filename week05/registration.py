@@ -25,12 +25,11 @@ while is_running:
             last_name = input("Please enter Last Name: ")
 
         ## Age: Must be a number; also check whether they are older or younger than 21 to determine whether they get a drink ticket.
-        age = input("Enter your Age: ")
+        age = ""
         while age == "":
-            print("Error: Age cannot be blank.")
             age = input("Please enter your Age: ")
             while not age.isdigit():
-                print("Error: Age must be a number.")
+                print("Error: Age cannot be blank. Age must be an integer.")
                 age = input("Please enter your Age: ")
         if int(age) >= 21:
             print("You are eligible for a drink ticket.")
