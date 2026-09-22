@@ -56,6 +56,7 @@ while is_running:
                         break  # The input is valid.
                     else:
                         print("Error! Invalid amount.")
+                        continue  # The input is invalid. Continue the loop from the top.
                 except ValueError:
                     print("Error! Please enter a number.")
                 except Exception as e:
@@ -70,6 +71,7 @@ while is_running:
                         break  # The input is valid.
                     else:
                         print("Error! Invalid amount.")
+                        continue  # The input is invalid. Continue the loop from the top.
                 except ValueError:
                     print("Error! Please enter a number.")
                 except Exception as e:
