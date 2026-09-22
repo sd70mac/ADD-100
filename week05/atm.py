@@ -36,7 +36,7 @@ while is_running:
                 try:
                     print("How much do you want to deposit?")
                     amount = float(input("$"))
-                    if amount >= 0:
+                    if amount > 0:
                         balance += amount
                         break  # The input is valid.
                     else:
@@ -51,7 +51,7 @@ while is_running:
                 try:
                     print("How much do you want to withdraw?")
                     amount = float(input("$"))
-                    if amount >= 0 and amount <= balance:
+                    if amount > 0 and amount <= balance:
                         balance -= amount
                         break  # The input is valid.
                     else:
@@ -66,7 +66,7 @@ while is_running:
                 try:
                     print("How much do you want to transfer?")
                     amount = float(input("$"))
-                    if amount >= 0 and amount <= balance:
+                    if amount > 0 and amount <= balance:
                         balance -= amount
                         break  # The input is valid.
                     else:
