@@ -11,8 +11,8 @@ ASSIGNMENT 5A: INPUT VALIDATION
 -----------------------------------------------------------------------
 """
 
-need_tickets = True
-while need_tickets:
+is_running = True
+while is_running:
     try:
         ## First Name & Last Name: Cannot be blank.
         first_name = input("Enter First Name: ")
@@ -42,13 +42,19 @@ while need_tickets:
             phone_number = input("Please enter your Phone Number: ")
 
         ## Ticket Count: Must be a valid integer > 0 (Crash-Proof!).
-        ticket_count = input("Enter Ticket Count: ")
+        ticket_count = ""
         while ticket_count == "":
-            print("Error: Ticket Count cannot be blank.")
-            ticket_count = input("Please enter your Ticket Count: ")
-            while not ticket_count.isdigit() or int(ticket_count) <= 0:
+            try:
+                ticket_count = int(input("Please enter your Ticket Count: "))
+            except ValueError:
                 print("Error: Ticket Count must be a valid integer greater than 0.")
-                ticket_count = input("Please enter your Ticket Count: ")
+                ticket_count = ""
+                continue
+            if ticket_count <= 0:
+                print("Error: Ticket Count must be greater than 0.")
+                ticket_count = ""
+                continue
     except ValueError:
         print(f"Something else went wrong.")
-    continue
+    need_tickets = input(f"Do you need more tickets? (Y/N)").upper()
+    is_running = need_tickets == "Y"
