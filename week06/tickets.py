@@ -12,8 +12,7 @@ ASSIGNMENT 6A: TICKET SALES
 """
 
 try:
-        choice = int(input("Please enter a seat number to reserve:"))
-    except ValueError:
-        print("Error! Please enter a valid number.")
-        continue
-    
+    choice = int(input("Please enter a seat number to reserve:"))
+except ValueError:
+    print("Error! Please enter a valid number.")
+    continue
