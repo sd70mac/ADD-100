@@ -28,7 +28,7 @@ while is_running:
     else:
         print("I'm sorry, that user does not exist.")
     """except ValueError:
-        print("Value Error! Please enter a valid ---.")
+        print("Value Error! Please enter a valid value.")
         continue
     except IndexError:
         print("Index Error!")"""

@@ -11,9 +11,9 @@ ASSIGNMENT 6A: TICKET SALES
 -----------------------------------------------------------------------
 """
 
+seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 is_running = True
 while is_running:
-    seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
     print("Available seats:", seats)
     try:
         choice = int(input("Please enter a seat number to reserve (0 to quit):"))
