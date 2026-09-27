@@ -11,8 +11,11 @@ ASSIGNMENT 6A: TICKET SALES
 -----------------------------------------------------------------------
 """
 
+seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
 try:
     choice = int(input("Please enter a seat number to reserve:"))
 except ValueError:
     print("Error! Please enter a valid number.")
     continue
+# case 0: quit
+# Thank you for using the ticket reservation system.
