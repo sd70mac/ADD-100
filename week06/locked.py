@@ -12,7 +12,7 @@ ASSIGNMENT 6B: THE DEPARTMENT SECURITY TERMINAL
 
 ## Declare variables that are known to be needed.
 ## The department constant, a tuple for the usernames.
-DESIGN
+DESIGN_DEPARTMENT = "Design Department"
 USER_NAMES = ("Andy", "Bob", "Cathy", "Dennis")
 
 ## While loop surrounding the program.
