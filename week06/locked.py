@@ -27,6 +27,11 @@ while is_running:
         print("Your password has been changed.")
     else:
         print("I'm sorry, that user does not exist.")
+    """except ValueError:
+        print("Value Error! Please enter a valid ---.")
+        continue
+    except IndexError:
+        print("Index Error!")"""
     is_running = False  # This is here for testing purposes, so the program doesn't run forever.  Will be moved.
 
 """Error handling to catch if the user tries to add a username
