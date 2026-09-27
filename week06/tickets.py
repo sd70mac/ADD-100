@@ -17,5 +17,8 @@ try:
 except ValueError:
     print("Error! Please enter a valid number.")
     continue
-# case 0: quit
+# 0: means quit
 # Thank you for using the ticket reservation system.
+if choice == 0:
+    print("Thank you for using the ticket reservation system.")
+    break
