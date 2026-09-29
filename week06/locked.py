@@ -24,11 +24,11 @@ while is_running:
     try:
         choice = int(
             input(
-                "Would you like to look up a username (1), change a username (2), change a password (3), or quit (4)?\n"
+                "Would you like to look up a username (1), change a username (2), add a user (3), change a password (4), or quit (5)?\n"
             )
         )
     except ValueError:
-        print("Invalid input. Please enter a number from 1 to 4.")
+        print("Invalid input. Please enter a number from 1 to 5.")
         continue
     except IndexError:
         print("Index Error!")
@@ -61,6 +61,8 @@ while is_running:
                     "Sorry, usernames cannot be changed here. Please email the help desk."
                 )
         case 3:
+            print("Sorry, new users cannot be added here. Please email the help desk.")
+        case 4:
             name = input("Please enter the username whose password you want to change:")
             try:
                 if name not in USER_NAMES:
@@ -68,8 +70,8 @@ while is_running:
                 else:
                     location = USER_NAMES.index(name)
                     password = input("\nEnter the new password:")
-                passwords[location] = password
-                print("\nYour password has been changed.")
+                    passwords[location] = password
+                    print("\nYour password has been changed.")
             except ValueError:
                 print("Sorry, that user does not exist.")
             except IndexError:
@@ -78,12 +80,12 @@ while is_running:
                 print(
                     "Sorry, passwords cannot be changed here. Please email the help desk."
                 )
-        case 4:
+        case 5:
             print(f"Thank you for using the {DEPARTMENT} Security Terminal.")
             is_running = False
             break
         case _:
-            print("Please choose an option from 1 to 4.")
+            print("Please choose an option from 1 to 5.")
     ## is_running = False  # This is here for testing purposes, so the program doesn't run forever.  Will be moved.
 
 """Error handling to catch if the user tries to add a username
