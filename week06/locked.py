@@ -21,7 +21,11 @@ is_running = True
 while is_running:
     ## Display the menu.
     print(f"\nWelcome to the {DEPARTMENT} Security Terminal.\n")
-    name = input("Please enter your username:")
+    name = input("Please enter your username, type exit or quit to quit:")
+    if name.lower() in ["exit", "quit"]:
+        print("Thank you for using the security terminal.")
+        is_running = False
+        break
     try:
         if name in USER_NAMES:
             location = USER_NAMES.index(name)
@@ -48,7 +52,7 @@ while is_running:
         print("Index Error!")
     except TypeError:
         print("To change your username, please email the help desk.")
-    is_running = False  # This is here for testing purposes, so the program doesn't run forever.  Will be moved.
+    ## is_running = False  # This is here for testing purposes, so the program doesn't run forever.  Will be moved.
 
 """Error handling to catch if the user tries to add a username
 (a TypeError, since tuples cannot be modified in place)
