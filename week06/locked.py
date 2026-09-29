@@ -30,10 +30,8 @@ while is_running:
     except ValueError:
         print("Invalid input. Please enter a number from 1 to 5.")
         continue
-    except IndexError:
-        print("Index Error!")
-    except TypeError:
-        print("To change your username, please email the help desk.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
     match choice:
         case 1:
             name = input("Please enter the username you want to look up:")
@@ -44,6 +42,8 @@ while is_running:
                 print("Sorry, that user does not exist.")
             except IndexError:
                 print("Index Error!")
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
         case 2:
             try:
                 location = USER_NAMES.index(
@@ -60,6 +60,8 @@ while is_running:
                 print(
                     "Sorry, usernames cannot be changed here. Please email the help desk."
                 )
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
         case 3:
             print("Sorry, new users cannot be added here. Please email the help desk.")
         case 4:
@@ -76,10 +78,8 @@ while is_running:
                 print("Sorry, that user does not exist.")
             except IndexError:
                 print("Index Error!")
-            except TypeError:
-                print(
-                    "Sorry, passwords cannot be changed here. Please email the help desk."
-                )
+            except Exception as e:
+                print(f"An unexpected error occurred: {e}")
         case 5:
             print(f"Thank you for using the {DEPARTMENT} Security Terminal.")
             is_running = False
