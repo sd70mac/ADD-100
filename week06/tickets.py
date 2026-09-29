@@ -18,6 +18,12 @@ while is_running:
     print("Available seats:", seats)
     try:
         choice = int(input("Please enter a seat number to reserve (0 to quit):"))
+        # 0: means quit
+        # Thank you for using the ticket reservation system.
+        if choice == 0:
+            print("Thank you for using the ticket reservation system.")
+            is_running = False
+            break
         ## Check if the seat is available.
         ## If the seat is available, remove it from the list.
         ## If the seat is taken, print a message to the user.
@@ -28,14 +34,15 @@ while is_running:
             seats.remove(choice)
             print(f"Seat {choice} is reserved for you.")
         else:
-            print("Seat {choice} is reserved already.  Please choose another.")
+            print(f"Seat {choice} is reserved already.  Please choose another.")
         ## Continue the loop.
     except ValueError:
         print(error_message)
         continue
-    # 0: means quit
-    # Thank you for using the ticket reservation system.
-    if choice == 0:
-        print("Thank you for using the ticket reservation system.")
+
+    if len(seats) == 0:
+        print(
+            "All seats are reserved.  Thank you for using the ticket reservation system."
+        )
         is_running = False
         break
