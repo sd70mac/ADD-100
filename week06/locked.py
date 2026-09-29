@@ -2,7 +2,7 @@
 -----------------------------------------------------------------------
 ASSIGNMENT 6B: THE DEPARTMENT SECURITY TERMINAL
 -----------------------------------------------------------------------
-[ ] 1. Header Docstring included. Yes.
+[ ] 1. Header Docstring included.
 [ ] 2. Department constant defined in ALL_CAPS.
 [ ] 3. Username tuple and password list defined.
 [ ] 4. While loop runs interactively.

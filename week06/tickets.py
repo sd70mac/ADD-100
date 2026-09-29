@@ -11,7 +11,7 @@ ASSIGNMENT 6A: TICKET SALES
 -----------------------------------------------------------------------
 """
 
-seats = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+seats = list(range(1, 21))
 is_running = True
 while is_running:
     print("Available seats:", seats)
@@ -20,6 +20,11 @@ while is_running:
         ## Check if the seat is available.
         ## If the seat is available, remove it from the list.
         ## If the seat is taken, print a message to the user.
+        if choice in seats:
+            seats.remove(choice)
+            print(f"Seat {choice} is reserved for you.")
+        else:
+            print("Seat {choice} is reserved already.  Please choose another.")
         ## Continue the loop.
     except ValueError:
         print("Error! Please enter a valid number (1-20).")
