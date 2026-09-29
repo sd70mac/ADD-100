@@ -13,6 +13,7 @@ ASSIGNMENT 6A: TICKET SALES
 
 seats = list(range(1, 21))
 is_running = True
+error_message = "Error! Please enter a valid number (1-20, 0 to quit)."
 while is_running:
     print("Available seats:", seats)
     try:
@@ -20,6 +21,9 @@ while is_running:
         ## Check if the seat is available.
         ## If the seat is available, remove it from the list.
         ## If the seat is taken, print a message to the user.
+        if choice < 0 or choice > 20:
+            print(error_message)
+            continue
         if choice in seats:
             seats.remove(choice)
             print(f"Seat {choice} is reserved for you.")
@@ -27,7 +31,7 @@ while is_running:
             print("Seat {choice} is reserved already.  Please choose another.")
         ## Continue the loop.
     except ValueError:
-        print("Error! Please enter a valid number (1-20).")
+        print(error_message)
         continue
     # 0: means quit
     # Thank you for using the ticket reservation system.
