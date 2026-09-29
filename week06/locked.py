@@ -12,7 +12,7 @@ ASSIGNMENT 6B: THE DEPARTMENT SECURITY TERMINAL
 
 ## Declare variables that are known to be needed.
 ## The department constant, a tuple for the usernames.
-DESIGN_DEPARTMENT = "Design Department"
+DEPARTMENT = "Design Department"
 USER_NAMES = ("Andy", "Bob", "Cathy", "Dennis")
 passwords = ["password1", "password2", "password3", "password4"]
 
@@ -20,10 +20,22 @@ passwords = ["password1", "password2", "password3", "password4"]
 is_running = True
 while is_running:
     ## Display the menu.
+    print(f"\nWelcome to the {DEPARTMENT} Security Terminal.\n")
     name = input("Please enter your username:")
     try:
         if name in USER_NAMES:
             location = USER_NAMES.index(name)
+            change_username = (
+                input("Would you like to change your username? (yes/no): ")
+                .strip()
+                .lower()
+            )
+            if change_username == "yes":
+                ## You
+                name = input("Please enter your new username:")
+                print(f"You entered {name}.")
+                USER_NAMES[location] = name
+                continue
             password = input("Enter your new password:")
             passwords[location] = password
             print("Your password has been changed.")
@@ -34,6 +46,8 @@ while is_running:
         continue
     except IndexError:
         print("Index Error!")
+    except TypeError:
+        print("To change your username, please email the help desk.")
     is_running = False  # This is here for testing purposes, so the program doesn't run forever.  Will be moved.
 
 """Error handling to catch if the user tries to add a username
