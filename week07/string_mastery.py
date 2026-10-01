@@ -64,3 +64,7 @@ for char in name_string:
 
 # TODO: After the loop, print the "Finale" (the final version with all 🦆 emojis)
 # Hint: You'll need one more .join() and one more print block here!
+current_name = " ".join(duck_letters)
+print("There was a teacher who had a duck and Ducky was his Name-o")
+print(f"({current_name}) \n" * 3)
+print("and Ducky was his Name-o!\n")
