@@ -26,11 +26,15 @@ RESPONSES = (
 
 print("Welcome to the Digital Oracle!")
 
-# TODO: Create a while loop that keeps asking questions
-# need a list of questions to ask the user.
-questions = []
-# TODO: Use random.choice(RESPONSES) to answer
-# TODO: If user types "quit", break the loop
-if input() == "quit":
-    print("Thank you for using the Digital Oracle... Goodbye!")
-    break
+is_running = True
+while is_running:
+    input("Ask a question (or type 'quit' to exit): ")
+    # Create a while loop that keeps asking questions
+    # need a list of questions to ask the user.
+    questions = []
+    # TODO: Use random.choice(RESPONSES) to answer
+    # TODO: If user types "quit", break the loop
+    if input() == "quit":
+        print("Thank you for using the Digital Oracle... Goodbye!")
+        break
+    is_running = False  # This line is to prevent an infinite loop during testing.  Remove it when you are ready to test the full program.
