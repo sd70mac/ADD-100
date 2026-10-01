@@ -13,7 +13,16 @@ ASSIGNMENT 7B: THE MAGIC 8 BALL
 import random
 
 # TODO: Create a tuple of at least 8 responses
-RESPONSES = ("Yes", "No", "Maybe", "Ask again later")
+RESPONSES = (
+    "Yes",
+    "No",
+    "Maybe",
+    "Ask again later",
+    "Cannot predict now",
+    "Definitely",
+    "Absolutely not",
+    "It is certain",
+)
 
 print("Welcome to the Digital Oracle!")
 
