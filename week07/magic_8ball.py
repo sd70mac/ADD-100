@@ -18,10 +18,15 @@ RESPONSES = (
     "No",
     "Maybe",
     "Ask again later",
+    "Better not tell you now",
     "Cannot predict now",
     "Definitely",
     "Absolutely not",
     "It is certain",
+    "Very doubtful",
+    "Reply hazy, try again",
+    "Better not tell you now",
+    "Concentrate and ask again",
 )
 
 print("Welcome to the Digital Oracle!")
@@ -32,7 +37,9 @@ while is_running:
     # Create a while loop that keeps asking questions
     # need a list of questions to ask the user.
     questions = []
-    # TODO: Use random.choice(RESPONSES) to answer
+    # Use random.choice(RESPONSES) to answer
+    response = random.choice(RESPONSES)
+    print(response)
     # TODO: If user types "quit", break the loop
     if input() == "quit":
         print("Thank you for using the Digital Oracle... Goodbye!")
