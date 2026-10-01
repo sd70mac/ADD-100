@@ -12,10 +12,10 @@ ASSIGNMENT 7A: STRING MASTERY LAB
 
 # --- TASK 1: TUNING THE GUITAR 🎸 ---
 instrument = "Acoustic Guitar"
-# TODO: Print the length of 'instrument'
+# Print the length of 'instrument'
 # TODO: Print the first and last letter of 'instrument'
 # TODO: Use min() and max() to find and print the lowest and highest ASCII characters
-
+print(len(instrument))
 
 # --- TASK 2: THE CLEANUP CREW 🧵 ---
 messy_input = "   vOLUME_knob_11   "
@@ -37,6 +37,7 @@ name_string = "DUCKY"
 duck_letters = list(name_string)
 count = 0
 
+# Note that this is not the famous one about the duck wanting grapes from a lemonade stand.
 print("\n--- Singing the Duck Song! ---")
 
 # TODO: Create a loop that iterates through name_string (for char in name_string)
