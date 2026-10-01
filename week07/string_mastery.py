@@ -28,7 +28,10 @@ messy_input = "   vOLUME_knob_11   "
 serial_number = "90210"
 # TODO: Use .isdigit() to check validity.
 # Print "Valid Serial" if it is numeric, or "Invalid Serial" if it isn't.
-
+if serial_number.isdigit():
+    print("Valid Serial")
+else:
+    print("Invalid Serial")
 
 # --- TASK 4: THE DUCK BRIDGE 🦆🎵 ---
 # We are going to sing about a Duck!
