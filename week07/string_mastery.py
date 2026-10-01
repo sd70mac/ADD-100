@@ -13,28 +13,32 @@ ASSIGNMENT 7A: STRING MASTERY LAB
 # --- TASK 1: TUNING THE GUITAR 🎸 ---
 instrument = "Acoustic Guitar"
 # Print the length of 'instrument'
-# TODO: Print the first and last letter of 'instrument'
-# TODO: Use min() and max() to find and print the lowest and highest ASCII characters
 print(len(instrument))
+# Print the first and last letter of 'instrument'
+print(instrument[0], instrument[-1])
+# Use min() and max() to find and print the lowest and highest ASCII characters
+print(
+    f"'{min(instrument)}', '{max(instrument)}'"
+)  # The quotation marks are to make the space character more obvious in the output.
 
 # --- TASK 2: THE CLEANUP CREW 🧵 ---
 messy_input = "   vOLUME_knob_11   "
-# TODO: Use .strip() to remove spaces
+# Use .strip() to remove spaces
 messy_input = messy_input.strip()
-# TODO: Use .upper() to capitalize everything
+# Use .upper() to capitalize everything
 messy_input = messy_input.upper()
-# TODO: Use .replace() to swap the underscores "_" for spaces " "
+# Use .replace() to swap the underscores "_" for spaces " "
 messy_input = messy_input.replace("_", " ")
-print(messy_input)
+# print(messy_input) # Turned off since testing is complete.  Useful to see the result.
 
 # --- TASK 3: THE VALIDATOR 🔍 ---
 serial_number = "90210"
-# TODO: Use .isdigit() to check validity.
+# Use .isdigit() to check validity.
 # Print "Valid Serial" if it is numeric, or "Invalid Serial" if it isn't.
 if serial_number.isdigit():
-    print("Valid Serial")
+    print("\nValid Serial")
 else:
-    print("Invalid Serial")
+    print("\nInvalid Serial")
 
 # --- TASK 4: THE DUCK BRIDGE 🦆🎵 ---
 # We are going to sing about a Duck!
@@ -62,7 +66,7 @@ for char in name_string:
     #       6. Increment count by 1
     count += 1
 
-# TODO: After the loop, print the "Finale" (the final version with all 🦆 emojis)
+# After the loop, print the "Finale" (the final version with all 🦆 emoji)
 # Hint: You'll need one more .join() and one more print block here!
 current_name = " ".join(duck_letters)
 print("There was a teacher who had a duck and Ducky was his Name-o")
