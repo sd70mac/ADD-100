@@ -20,9 +20,12 @@ print(len(instrument))
 # --- TASK 2: THE CLEANUP CREW 🧵 ---
 messy_input = "   vOLUME_knob_11   "
 # TODO: Use .strip() to remove spaces
+messy_input = messy_input.strip()
 # TODO: Use .upper() to capitalize everything
+messy_input = messy_input.upper()
 # TODO: Use .replace() to swap the underscores "_" for spaces " "
-
+messy_input = messy_input.replace("_", " ")
+print(messy_input)
 
 # --- TASK 3: THE VALIDATOR 🔍 ---
 serial_number = "90210"
