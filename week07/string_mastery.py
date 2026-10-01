@@ -50,7 +50,7 @@ count = 0
 # Note that this is not the famous one about the duck wanting grapes from a lemonade stand.
 print("\n--- Singing the Duck Song! ---")
 
-# TODO: Create a loop that iterates through name_string (for char in name_string)
+# Create a loop that iterates through name_string (for char in name_string)
 for char in name_string:
     #  Inside the loop:
     #       1. Use " ".join(duck_letters) to create a variable named 'current_name'
