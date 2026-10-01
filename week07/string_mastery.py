@@ -36,22 +36,25 @@ serial_number = "90210"
 name_string = "DUCKY"
 duck_letters = list(name_string)
 count = 0
-current_name = "Filler text to be replaced. "
 
 # Note that this is not the famous one about the duck wanting grapes from a lemonade stand.
 print("\n--- Singing the Duck Song! ---")
 
 # TODO: Create a loop that iterates through name_string (for char in name_string)
+# for char in name_string
 # TODO: Inside the loop:
 #       1. Use " ".join(duck_letters) to create a variable named 'current_name'
+current_name = "Filler text to be replaced. "
 #       2. Print: "There was a teacher who had a duck and Ducky was his Name-o"
 print("There was a teacher who had a duck and Ducky was his Name-o")
 #       3. Print the line f"({current_name}) \n" multiplied by 3
 print(f"({current_name}) \n" * 3)
 #       4. Print "and Ducky was his Name-o!\n"
+print("and Ducky was his Name-o!\n")
 #       5. Replace the letter in duck_letters at index [count] with "🦆"
-#       6. Increment count by 1
 
+#       6. Increment count by 1
+count += 1
 
 # TODO: After the loop, print the "Finale" (the final version with all 🦆 emojis)
 # Hint: You'll need one more .join() and one more print block here!
