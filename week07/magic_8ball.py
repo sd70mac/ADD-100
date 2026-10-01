@@ -23,5 +23,5 @@ questions = []
 # TODO: Use random.choice(RESPONSES) to answer
 # TODO: If user types "quit", break the loop
 if input() == "quit":
-    print("Thank you for... Goodbye!")
+    print("Thank you for using the Digital Oracle... Goodbye!")
     break
