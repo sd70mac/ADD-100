@@ -20,6 +20,7 @@ print(instrument[0], instrument[-1])
 print(
     f"'{min(instrument)}', '{max(instrument)}'"
 )  # The quotation marks are to make the space character more obvious in the output.
+# Without the quotation marks, the space character was practically invisible in the output.
 
 # --- TASK 2: THE CLEANUP CREW 🧵 ---
 messy_input = "   vOLUME_knob_11   "
@@ -33,6 +34,7 @@ messy_input = messy_input.replace("_", " ")
 
 # --- TASK 3: THE VALIDATOR 🔍 ---
 serial_number = "90210"
+# serial_number = "Wørd123"  # This is a test case to check the validation logic.
 # Use .isdigit() to check validity.
 # Print "Valid Serial" if it is numeric, or "Invalid Serial" if it isn't.
 if serial_number.isdigit():
