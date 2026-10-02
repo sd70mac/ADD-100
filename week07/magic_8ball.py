@@ -57,4 +57,3 @@ while is_running:
     # Use random.choice(RESPONSES) to answer
     response = random.choice(RESPONSES)
     print(response)
-    # is_running = False  # This line is to prevent an infinite loop during testing.  Remove it when you are ready to test the full program.
