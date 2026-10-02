@@ -12,7 +12,7 @@ ASSIGNMENT 7B: THE MAGIC 8 BALL
 
 import random
 
-# TODO: Create a tuple of at least 8 responses
+# Create a tuple of at least 8 responses
 RESPONSES = (
     "Yes",
     "No",
@@ -27,21 +27,32 @@ RESPONSES = (
     "Reply hazy, try again",
     "Better not tell you now",
     "Concentrate and ask again",
+    "42",
+    "You may rely on it",
+    "Do not count on it",
+    "Outlook not so good",
+    "Signs point to yes",
+    "Yes, in due time",
+    "My sources say no",
+    "Most likely",
+    "Outlook good",
+    "My reply is no",
+    "You will have to wait and see",
 )
 
 print("Welcome to the Digital Oracle!")
 
 is_running = True
 while is_running:
-    input("Ask a question (or type 'quit' to exit): ")
+    question = input("Ask a question (or type 'quit' to exit): ")
     # Create a while loop that keeps asking questions
     # need a list of questions to ask the user.
-    questions = []
+    # questions = []
+    # If user types "quit", break the loop
+    if "quit" in question.lower():
+        print("Thank you for using the Digital Oracle... Goodbye!")
+        break
     # Use random.choice(RESPONSES) to answer
     response = random.choice(RESPONSES)
     print(response)
-    # TODO: If user types "quit", break the loop
-    if input() == "quit":
-        print("Thank you for using the Digital Oracle... Goodbye!")
-        break
-    is_running = False  # This line is to prevent an infinite loop during testing.  Remove it when you are ready to test the full program.
+    # is_running = False  # This line is to prevent an infinite loop during testing.  Remove it when you are ready to test the full program.
