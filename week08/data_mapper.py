@@ -43,5 +43,6 @@ NATO_ALPHABET = {
 word = input("Enter word to spell: ").upper()
 
 # TODO: Loop through each character
+# Pay attention to case sensitivity!
 
 # TODO: try to print the NATO code, except if character is missing
