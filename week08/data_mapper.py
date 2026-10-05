@@ -48,3 +48,4 @@ while is_running:
     is_running = False  # Remove this after testing. Prevents an infinite loop.
 
 # TODO: try to print the NATO code, except if character is missing
+# if letter in dictionary, print the NATO code, else print a space?
