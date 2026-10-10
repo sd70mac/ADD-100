@@ -45,6 +45,8 @@ is_running = True
 while is_running:
     # TODO: Loop through each character
     # Pay attention to case sensitivity!
+    print(word)
+
     is_running = False  # Remove this after testing. Prevents an infinite loop.
 
 # TODO: try to print the NATO code, except if character is missing
