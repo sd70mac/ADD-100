@@ -45,12 +45,15 @@ while is_running:
     word = input("Enter word to spell: ").upper()
     # Loop through each character
     # Pay attention to case sensitivity!
-    print(word)
+    # print(word) #turn this back on to see the word in uppercase before conversion.
     for letter in word:
-        NATO_word = NATO_ALPHABET.get(
-            letter, " "
-        )  # Get the NATO code for the letter, or a space if not found.
-        print(NATO_word)
+        try:
+            nato_word = NATO_ALPHABET[
+                letter
+            ]  # retrieve the NATO word from the dictionary
+        except KeyError:
+            nato_word = " "
+        print(nato_word)
     if word == "QUIT":
         break
 
