@@ -47,10 +47,10 @@ while is_running:
     # Pay attention to case sensitivity!
     print(word)
     for letter in word:
-        NATO_ALPHABET.get(
+        NATO_word = NATO_ALPHABET.get(
             letter, " "
         )  # Get the NATO code for the letter, or a space if not found.
-        print()
+        print(NATO_word)
     is_running = False  # Remove this after testing. Prevents an infinite loop.
 
 # try to print the NATO code, except if character is missing
