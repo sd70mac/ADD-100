@@ -40,9 +40,9 @@ NATO_ALPHABET = {
     "Z": "Zulu",
 }
 
-word = input("Enter word to spell: ").upper()
 is_running = True
 while is_running:
+    word = input("Enter word to spell: ").upper()
     # Loop through each character
     # Pay attention to case sensitivity!
     print(word)
@@ -51,7 +51,8 @@ while is_running:
             letter, " "
         )  # Get the NATO code for the letter, or a space if not found.
         print(NATO_word)
-    is_running = False  # Remove this after testing. Prevents an infinite loop.
+    if word == "QUIT":
+        break
 
 # try to print the NATO code, except if character is missing
 # if letter in dictionary, print the NATO code, else print a space?
