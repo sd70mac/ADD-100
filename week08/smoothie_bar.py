@@ -15,6 +15,8 @@ ASSIGNMENT 9A: THE SMOOTHIE SPRINT
 BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
 
+choice_size = ""
+
 
 # TODO: Define get_price(size)
 def get_base_price(size):
@@ -35,6 +37,10 @@ def blend(size, base, fruit, scoops):
 # TODO: Define main() to collect input and call your logic
 def main():
     print("This will collect input and call logic.")
+    choice_size = input(
+        "What size smoothie would you like? (Small, Medium, Large): "
+    )  # I may move this. TBD.
+
     cost = get_base_price(choice_size)
 
 
