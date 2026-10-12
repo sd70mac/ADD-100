@@ -15,8 +15,26 @@ ASSIGNMENT 9A: THE SMOOTHIE SPRINT
 BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
 
+
 # TODO: Define get_price(size)
+def get_base_price(size):
+    # Determine price based on size
+    if size == "Small":
+        return 3.00
+    elif size == "Medium":
+        return 4.00
+    else:
+        return 5.00
+
 
 # TODO: Define blend(size, base, fruit, scoops)
 
+
 # TODO: Define main() to collect input and call your logic
+def main():
+    print("This will collect input and call logic.")
+    cost = get_base_price(choice_size)
+
+
+# Run the main function to start the program.
+main()
