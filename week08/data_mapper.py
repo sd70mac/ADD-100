@@ -55,6 +55,7 @@ while is_running:
             nato_word = " "
         print(nato_word)
     if word == "QUIT":
+        print("Exiting program, goodbye!")
         break
 
 # try to print the NATO code, except if character is missing
