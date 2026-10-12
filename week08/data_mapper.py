@@ -48,9 +48,9 @@ while is_running:
     # print(word) #turn this back on to see the word in uppercase before conversion.
     for letter in word:
         try:
-            nato_word = NATO_ALPHABET[
-                letter
-            ]  # retrieve the NATO word from the dictionary
+            nato_word = NATO_ALPHABET[letter]
+            # Retrieve the NATO word from the dictionary
+            # Using .get would be another (safer) option, but it would not raise an exception if the letter is not found.
         except KeyError:
             nato_word = " "
         print(nato_word)
