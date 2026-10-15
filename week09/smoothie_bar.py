@@ -19,11 +19,11 @@ choice_size = ""
 
 
 # TODO: Define get_price(size)
-def get_base_price(size):
+def get_price(size):
     # Determine price based on size
-    if size == "Small":
+    if size == "small":
         return 3.00
-    elif size == "Medium":
+    elif size == "medium":
         return 4.00
     else:
         return 5.00
@@ -44,7 +44,7 @@ def main():
         )  # I may move this. TBD.
         is_running = False  # Set to False to exit the loop after one iteration
 
-    cost = get_base_price(choice_size)
+    cost = get_price(choice_size)
     print(f"The price for your {choice_size} smoothie is ${cost:.2f}")
 
 
