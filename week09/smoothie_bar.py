@@ -15,15 +15,16 @@ ASSIGNMENT 9A: THE SMOOTHIE SPRINT
 BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
 
-choice_size = ""
+size = ""
 
 
 # TODO: Define get_price(size)
 def get_price(size):
     # Determine price based on size
-    if size == "Small":
+    size = size.lower()
+    if size == "small":
         return 3.00
-    elif size == "Medium":
+    elif size == "medium":
         return 4.00
     else:
         return 5.00
@@ -39,13 +40,13 @@ def main():
     is_running = True
     while is_running:
         print("This will collect input and call logic.")
-        choice_size = input(
+        size = input(
             "What size smoothie would you like? (Small, Medium, Large): "
         )  # I may move this. TBD.
         is_running = False  # Set to False to exit the loop after one iteration
 
-    cost = get_price(choice_size)
-    print(f"The price for your {choice_size} smoothie is ${cost:.2f}")
+    cost = get_price(size)
+    print(f"The price for your {size} smoothie is ${cost:.2f}")
 
 
 # Run the main function to start the program.
