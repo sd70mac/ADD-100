@@ -21,9 +21,9 @@ choice_size = ""
 # TODO: Define get_price(size)
 def get_price(size):
     # Determine price based on size
-    if size == "small":
+    if size == "Small":
         return 3.00
-    elif size == "medium":
+    elif size == "Medium":
         return 4.00
     else:
         return 5.00
