@@ -32,7 +32,7 @@ def get_price(size):
 
 # TODO: Define blend(size, base, fruit, scoops)
 def blend(size, base, fruit, scoops):
-    print("This will um....blend your smoothie.")
+    print("This will blend your smoothie.")
 
 
 # TODO: Define main() to collect input and call your logic
