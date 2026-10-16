@@ -40,13 +40,15 @@ def main():
     is_running = True
     while is_running:
         print("This will collect input and call logic.")
-        size = input(
-            "What size smoothie would you like? (Small, Medium, Large): "
+        size_choice = input(
+            "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large): "
         )  # I may move this. TBD.
+
         is_running = False  # Set to False to exit the loop after one iteration
 
     cost = get_price(size)
     print(f"The price for your {size} smoothie is ${cost:.2f}")
+    # blend(size, base, fruit, scoops)
 
 
 # Run the main function to start the program.
