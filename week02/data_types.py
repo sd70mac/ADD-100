@@ -14,7 +14,7 @@ ASSIGNMENT REQUIREMENTS (DO NOT DELETE)
 
 item_name = "EMD F40PH"  # String variable
 quantity = 2  # Integer variable
-price = 1500000  # Float variable
+price = 1500000.0  # Float variable, have to use a decimal point to make it a float
 is_available = True  # Boolean variable
 print(f"\n")
 print(f" item_name: {item_name}, \n")
