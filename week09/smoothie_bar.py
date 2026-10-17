@@ -14,7 +14,7 @@ ASSIGNMENT 9A: THE SMOOTHIE SPRINT
 # GLOBAL CONSTANTS (The Pantry)
 BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
-SIZE_OPTIONS = ("Small", "Medium", "Large")
+SIZE_CHOICES = ("Small", "Medium", "Large")
 
 size = ""
 
@@ -38,6 +38,8 @@ def blend(size, base, fruit, scoops):
 
 
 def menu():
+    # I created this to make my life easier.
+    # Display the menu options to the user
     print("Welcome to the Smoothie Bar!")
     print("Here are our options:")
 
