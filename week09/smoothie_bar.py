@@ -14,6 +14,7 @@ ASSIGNMENT 9A: THE SMOOTHIE SPRINT
 # GLOBAL CONSTANTS (The Pantry)
 BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
+SIZE_OPTIONS = ("Small", "Medium", "Large")
 
 size = ""
 
@@ -33,6 +34,12 @@ def get_price(size):
 # TODO: Define blend(size, base, fruit, scoops)
 def blend(size, base, fruit, scoops):
     print("This will blend your smoothie.")
+    print(f"Size: {size}, Base: {base}, Fruit: {fruit}, Scoops: {scoops}")
+
+
+def menu():
+    print("Welcome to the Smoothie Bar!")
+    print("Here are our options:")
 
 
 # TODO: Define main() to collect input and call your logic
