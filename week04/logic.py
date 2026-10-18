@@ -11,10 +11,13 @@ ASSIGNMENT REQUIREMENTS
 -----------------------------------------------------------------------
 """
 
+# Python 4A Boolean Logic
+
 num1 = int(input("Enter the first integer: "))
 num2 = int(input("Enter the second integer: "))
 
 # Logical Checks
+# These
 if num1 > 100 and num2 > 100:
     print("Both numbers are greater than 100.")
 elif num1 > 0 and num2 > 0:
