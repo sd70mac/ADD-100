@@ -17,18 +17,24 @@ FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
 SIZE_CHOICES = ("Small", "Medium", "Large")
 
 size = ""
+selected_size = 2
 
 
 # TODO: Define get_price(size)
 def get_price(size):
     # Determine price based on size
     size = size.lower()
-    if size == "small":
-        return 3.00
-    elif size == "medium":
-        return 4.00
-    else:
-        return 5.00
+    match size:
+        case "small":
+            return 3.00
+        case "medium":
+            return 4.00
+        case "large":
+            return 5.00
+        # ℹ️ _ is the default case when none of the sizes above match.
+        case _:
+            print("invalid entry")
+            return 0
 
 
 # TODO: Define blend(size, base, fruit, scoops)
@@ -42,6 +48,22 @@ def menu():
     # Display the menu options to the user
     print("Welcome to the Smoothie Bar!")
     print("Here are our options:")
+    print(f"Sizes: {SIZE_CHOICES}")
+    print(f"Bases: {BASES}")
+    print(f"Fruits: {FRUITS}")
+
+
+def menu_selection(selected_size):
+    # This function will handle the menu selection based on the user's input
+    if selected_size == "1":
+        return "Small"
+    elif selected_size == "2":
+        return "Medium"
+    elif selected_size == "3":
+        return "Large"
+    else:
+        print("Invalid selection. Defaulting to Medium.")
+        return "Medium"
 
 
 # TODO: Define main() to collect input and call your logic
@@ -49,12 +71,14 @@ def main():
     is_running = True
     while is_running:
         print("This will collect input and call logic.")
-        size_choice = input(
+        menu()
+        selected_size = input(
             "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large): "
         )  # I may move this. TBD.
 
         is_running = False  # Set to False to exit the loop after one iteration
 
+    size = menu_selection(selected_size)
     cost = get_price(size)
     print(f"The price for your {size} smoothie is ${cost:.2f}")
     # blend(size, base, fruit, scoops)
