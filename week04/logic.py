@@ -20,6 +20,7 @@ num2 = int(input("Enter the second integer: "))
 # These
 if num1 > 100 and num2 > 100:
     print("Both numbers are greater than 100.")
+    # Redundant check for zero is skipped if both numbers are greater than 100.
 elif num1 > 0 and num2 > 0:
     print("Both numbers are greater than 0.")
 if num1 % 2 == 0 or num2 % 2 == 0:
