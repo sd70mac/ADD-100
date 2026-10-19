@@ -20,7 +20,7 @@ size = ""
 selected_size = 2
 
 
-# TODO: Define get_price(size)
+# Define get_price(size)
 def get_price(size):
     # Determine price based on size
     size = size.lower()
@@ -37,7 +37,7 @@ def get_price(size):
             return 0
 
 
-# TODO: Define blend(size, base, fruit, scoops)
+# Define blend(size, base, fruit, scoops)
 def blend(size, base, fruit, scoops):
     print("This will blend your smoothie.")
     print(f"Size: {size}, Base: {base}, Fruit: {fruit}, Scoops: {scoops}")
@@ -66,7 +66,7 @@ def menu_selection(selected_size):
         return "Medium"
 
 
-# TODO: Define main() to collect input and call your logic
+# Define main() to collect input and call your logic
 def main():
     is_running = True
     while is_running:
