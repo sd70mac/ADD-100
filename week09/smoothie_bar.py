@@ -89,7 +89,10 @@ def main():
             size = menu_selection(selected_size)
             cost = get_price(size)
             print(f"The price for your {size} smoothie is ${cost:.2f}")
-            # blend(size, base, fruit, scoops)
+            # scoops = input("How many scoops of fruit would you like? ") # This could be made into a function, but it means we would need more error handling for the input. I will leave it as is for now.
+            scoops = 2  # For testing purposes, we will set scoops to 2. This could be changed later to collect user input (see above).
+            # Syntax of blend(size, base, fruit, scoops)
+            blend(size, BASES[3], FRUITS[0], scoops)
         # main_is_running = False  # Set to False to exit the loop after one iteration. Uncomment this line for testing.
     print("Thank you for visiting the Smoothie Bar! Goodbye!")
 
