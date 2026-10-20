@@ -35,7 +35,7 @@ def get_price(size):
         # ℹ️ _ is the default case when none of the sizes above match.
         case _:
             print("invalid entry")
-            return 0
+            return 0.00
 
 
 # Define blend(size, base, fruit, scoops)
@@ -58,6 +58,15 @@ def select_size():
     return input(
         "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
     )
+
+
+def get_scoops():
+    while True:
+        try:
+            scoops = int(input("How many scoops of fruit would you like? "))
+            break
+        except ValueError:
+            print("Please enter a whole number.")
 
 
 def menu_selection(selected_size):
@@ -89,8 +98,8 @@ def main():
             size = menu_selection(selected_size)
             cost = get_price(size)
             print(f"The price for your {size} smoothie is ${cost:.2f}")
-            # scoops = input("How many scoops of fruit would you like? ") # This could be made into a function, but it means we would need more error handling for the input. I will leave it as is for now.
-            scoops = 2  # For testing purposes, we will set scoops to 2. This could be changed later to collect user input (see above).
+            scoops = get_scoops()
+            # scoops = 2  # For testing purposes, we will set scoops to 2. This could be changed later to collect user input (see above).
             # Syntax of blend(size, base, fruit, scoops)
             blend(size, BASES[3], FRUITS[0], scoops)
         # main_is_running = False  # Set to False to exit the loop after one iteration. Uncomment this line for testing.
