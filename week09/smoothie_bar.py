@@ -18,11 +18,13 @@ SIZE_CHOICES = ("Small", "Medium", "Large")
 
 size = ""
 selected_size = 2
+main_is_running = True
 
 
 # Define get_price(size)
 def get_price(size):
     # Determine price based on size
+    # Two decimal places because we are dealing with dollars and cents.
     size = size.lower()
     match size:
         case "small":
@@ -61,6 +63,12 @@ def menu_selection(selected_size):
         return "Medium"
     elif selected_size == "3":
         return "Large"
+    elif selected_size == "0":
+        print("Exiting the program. Goodbye!")
+        main_is_running = False
+        sys.exit(
+            0
+        )  # Exit the program gracefully. Based on this: https://www.geeksforgeeks.org/python/python-exit-commands-quit-exit-sys-exit-and-os-_exit/
     else:
         print("Invalid selection. Defaulting to Medium.")
         return "Medium"
@@ -68,15 +76,15 @@ def menu_selection(selected_size):
 
 # Define main() to collect input and call your logic
 def main():
-    is_running = True
-    while is_running:
+    main_is_running = True
+    while main_is_running:
         print("This will collect input and call logic.")
         menu()
         selected_size = input(
-            "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large): "
+            "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
         )  # I may move this. TBD.
 
-        is_running = False  # Set to False to exit the loop after one iteration
+        # main_is_running = False  # Set to False to exit the loop after one iteration. Uncomment this line for testing.
 
     size = menu_selection(selected_size)
     cost = get_price(size)
