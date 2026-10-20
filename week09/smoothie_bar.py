@@ -16,9 +16,6 @@ BASES = ("Water", "Apple Juice", "Orange Juice", "Milk")
 FRUITS = ("Strawberry", "Banana", "Mango", "Blueberry")
 SIZE_CHOICES = ("Small", "Medium", "Large")
 
-size = ""
-selected_size = 2
-
 
 # Define get_price(size)
 def get_price(size):
@@ -93,6 +90,7 @@ def main():
     while main_is_running:
         # This will collect input and call logic.
         menu()
+        # Menu selection of 0 to quit.
         selected_size = select_size()
         if selected_size == "0":
             main_is_running = False
