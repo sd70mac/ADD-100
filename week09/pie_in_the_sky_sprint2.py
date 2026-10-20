@@ -26,12 +26,14 @@ def get_customer_info():
 def get_past_orders(customer_info):
     """Display the available past orders."""
     print("Here are your past orders:")
+    # Placeholder for actual implementation
     return []
 
 
 def get_popular_orders():
     """Return the most popular orders."""
     print("Here are the most popular orders:")
+    # Placeholder for actual implementation
     return []
 
 
@@ -46,6 +48,7 @@ def get_order():
 
 def calculate_bill(order):
     """Return the total for the order."""
+    # Placeholder for actual implementation
     return 0.00
 
 
@@ -58,6 +61,7 @@ def print_bill(order, total):
 
 def calculate_bill(order):
     """Return the total for the order."""
+    # Placeholder for actual implementation
     return 0.00
 
 
