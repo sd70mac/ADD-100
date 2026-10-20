@@ -67,6 +67,7 @@ def get_scoops():
             break
         except ValueError:
             print("Please enter a whole number.")
+    return scoops
 
 
 def menu_selection(selected_size):
