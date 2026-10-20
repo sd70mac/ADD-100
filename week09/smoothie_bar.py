@@ -79,7 +79,7 @@ def menu_selection(selected_size):
     elif selected_size == "3":
         return "Large"
     elif selected_size == "0":
-        main_is_running = False
+        return "0"
     else:
         print("Invalid selection. Defaulting to Medium.")
         return "Medium"
