@@ -37,14 +37,14 @@ def get_customer_info():
 
 
 def get_past_orders(customer_info):
-    """Display the available past orders."""
-    print("Here are your past orders:")
+    """Retrieve the available past orders."""
     # Placeholder for actual implementation
     return []
 
 
 def show_past_orders(past_orders):
     """Display the available past orders."""
+    print("Here are your past orders:")
     pass
 
 
@@ -96,7 +96,8 @@ def main():
     for category in CATEGORIES:
         available_items = get_available_items(category)
         selected_items = get_items_for_category(category, available_items)
-        order.extend(selected_items)
+        order.extend(selected_items)  # I have read about combining lists before.
+        # Handy link: https://www.w3schools.com/python/ref_list_extend.asp
 
     total = calculate_bill(order)
     print_bill(order, total)
