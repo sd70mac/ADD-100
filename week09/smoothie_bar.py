@@ -55,6 +55,12 @@ def menu():
     print(f"Fruits: {FRUITS}")
 
 
+def select_size():
+    return input(
+        "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
+    )
+
+
 def menu_selection(selected_size):
     # This function will handle the menu selection based on the user's input
     if selected_size == "1":
@@ -66,7 +72,6 @@ def menu_selection(selected_size):
     elif selected_size == "0":
         print("Exiting the program. Goodbye!")
         main_is_running = False
-
     else:
         print("Invalid selection. Defaulting to Medium.")
         return "Medium"
@@ -78,9 +83,7 @@ def main():
     while main_is_running:
         print("This will collect input and call logic.")
         menu()
-        selected_size = input(
-            "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
-        )  # I may move this. TBD.
+        selected_size = select_size()
         if selected_size == "0":
             print("Exiting the program. Goodbye!")
             main_is_running = False
