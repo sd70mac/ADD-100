@@ -18,7 +18,6 @@ SIZE_CHOICES = ("Small", "Medium", "Large")
 
 size = ""
 selected_size = 2
-main_is_running = True
 
 
 # Define get_price(size)
