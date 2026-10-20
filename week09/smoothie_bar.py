@@ -66,9 +66,7 @@ def menu_selection(selected_size):
     elif selected_size == "0":
         print("Exiting the program. Goodbye!")
         main_is_running = False
-        sys.exit(
-            0
-        )  # Exit the program gracefully. Based on this: https://www.geeksforgeeks.org/python/python-exit-commands-quit-exit-sys-exit-and-os-_exit/
+
     else:
         print("Invalid selection. Defaulting to Medium.")
         return "Medium"
@@ -83,13 +81,17 @@ def main():
         selected_size = input(
             "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
         )  # I may move this. TBD.
-
+        if selected_size == "0":
+            print("Exiting the program. Goodbye!")
+            main_is_running = False
+            break
+        else:
+            main_is_running = True
+            size = menu_selection(selected_size)
+            cost = get_price(size)
+            print(f"The price for your {size} smoothie is ${cost:.2f}")
+            # blend(size, base, fruit, scoops)
         # main_is_running = False  # Set to False to exit the loop after one iteration. Uncomment this line for testing.
-
-    size = menu_selection(selected_size)
-    cost = get_price(size)
-    print(f"The price for your {size} smoothie is ${cost:.2f}")
-    # blend(size, base, fruit, scoops)
 
 
 # Run the main function to start the program.
