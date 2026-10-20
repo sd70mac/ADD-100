@@ -6,7 +6,7 @@ Developer: John George
 
 # GLOBAL CONSTANTS (Pantry Rules)
 MENU_FILE = "menu.txt"  # Path to the menu file, I may rename this later.
-# Docstrings will get pulled into documentation, unlike regular comments.
+# Docstrings can get pulled into documentation, unlike regular comments.
 """
 The menu file to contain the following sections: "Appetizers", "Entrees", "Drinks", "Desserts"
 I will also need to identify the Breakfast items, Lunch items, and Dinner items
