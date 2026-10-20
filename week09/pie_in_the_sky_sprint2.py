@@ -1,6 +1,7 @@
 """
 ASSIGNMENT 9B: SPRINT 2 - FUNCTIONAL STUBS
 Project: Pie in the Sky
+Developer: John George
 """
 
 # GLOBAL CONSTANTS (Pantry Rules)
