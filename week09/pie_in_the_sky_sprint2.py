@@ -60,12 +60,6 @@ def print_bill(order, total):
     pass
 
 
-def calculate_bill(order):
-    """Return the total for the order."""
-    # Placeholder for actual implementation
-    return 0.00
-
-
 # I hope I'm doing this right.
 # I know I need to call the functions in main() so that they actually run!
 def main():
