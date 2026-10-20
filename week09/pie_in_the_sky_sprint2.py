@@ -12,18 +12,23 @@ The menu file to contain the following sections: "Appetizers", "Entrees", "Drink
 I will also need to identify the Breakfast items, Lunch items, and Dinner items
 The menu file should be structured in a way that each section is clearly defined, as well as easy to read, and each item within the sections is listed with its corresponding price.
 """
-CATEGORIES = ("Appetizers", "Entrees", "Drinks", "Desserts")
+CATEGORIES = (
+    "Appetizers",
+    "Entrees",
+    "Drinks",
+    "Desserts",
+)  # I don't know if I actually need this.  I'm keeping it for now. Let me know what you think!
 
 
 def get_available_items(category):
     """Return a list of available items for the given category."""
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return []
 
 
 def get_items_for_category(category, available_items):
     """Allow the user to select items from the available items for a category."""
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return []
 
 
@@ -32,32 +37,33 @@ def get_customer_info():
     Function to get customer information.
     Returns customer details.
     """
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return {"name": "John Doe"}
 
 
 def get_past_orders(customer_info):
     """Retrieve the available past orders."""
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return []
 
 
 def show_past_orders(past_orders):
     """Display the available past orders."""
     print("Here are your past orders:")
+    # 💡 TODO: actually display the past orders
     pass
 
 
 def select_past_order(past_orders):
     """Allow the user to select a past order."""
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return None
 
 
 def get_popular_orders():
     """Return the most popular orders."""
     print("Here are the most popular orders:")
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return []
 
 
@@ -66,13 +72,13 @@ def get_order():
     Function to get the customer's order.
     Returns a list of ordered items.
     """
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return ["Item1", "Item2"]
 
 
 def calculate_bill(order):
     """Return the total for the order."""
-    # Placeholder for actual implementation
+    # 💡 TODO: Placeholder for actual implementation
     return 0.00
 
 
@@ -96,7 +102,8 @@ def main():
     for category in CATEGORIES:
         available_items = get_available_items(category)
         selected_items = get_items_for_category(category, available_items)
-        order.extend(selected_items)  # I have read about combining lists before.
+        # Commented out because it isn't working properly yet.
+        # order.extend(selected_items)  # I have read about combining lists before.
         # Handy link: https://www.w3schools.com/python/ref_list_extend.asp
 
     total = calculate_bill(order)
