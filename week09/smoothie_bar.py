@@ -100,9 +100,9 @@ def main():
             cost = get_price(size)
             print(f"The price for your {size} smoothie is ${cost:.2f}")
             scoops = get_scoops()
-            # scoops = 2  # For testing purposes, we will set scoops to 2. This could be changed later to collect user input (see above).
             # Syntax of blend(size, base, fruit, scoops)
             blend(size, BASES[3], FRUITS[0], scoops)
+            # For testing purposes, we are just passing some specified values for base and fruit. In a real application, these would be collected from the user as well.
         # main_is_running = False  # Set to False to exit the loop after one iteration. Uncomment this line for testing.
     print("Thank you for visiting the Smoothie Bar! Goodbye!")
 
