@@ -41,7 +41,16 @@ def get_price(size):
 # Define blend(size, base, fruit, scoops)
 def blend(size, base, fruit, scoops):
     print("This will blend your smoothie.")
-    print(f"Size: {size}, Base: {base}, Fruit: {fruit}, Scoops: {scoops}")
+    print(
+        f"Size: {size}, Base: {base}, Fruit: {fruit}, Scoops: {scoops}"
+    )  # We are just printing the values for now. In a real application, this would trigger the blending process.
+
+
+# Just getting input from the user for smoothie size.
+def select_size():
+    return input(
+        "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
+    )
 
 
 def menu():
@@ -54,12 +63,7 @@ def menu():
     print(f"Fruits: {FRUITS}")
 
 
-def select_size():
-    return input(
-        "What size smoothie would you like? (1 for Small, 2 for Medium, 3 for Large, 0 to exit): "
-    )
-
-
+# This function will handle the number of scoops input and ensure it's an integer.
 def get_scoops():
     while True:
         try:
