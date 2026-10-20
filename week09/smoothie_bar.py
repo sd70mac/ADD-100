@@ -70,7 +70,6 @@ def menu_selection(selected_size):
     elif selected_size == "3":
         return "Large"
     elif selected_size == "0":
-        print("Exiting the program. Goodbye!")
         main_is_running = False
     else:
         print("Invalid selection. Defaulting to Medium.")
@@ -81,13 +80,11 @@ def menu_selection(selected_size):
 def main():
     main_is_running = True
     while main_is_running:
-        print("This will collect input and call logic.")
+        # This will collect input and call logic.
         menu()
         selected_size = select_size()
         if selected_size == "0":
-            print("Exiting the program. Goodbye!")
             main_is_running = False
-            break
         else:
             main_is_running = True
             size = menu_selection(selected_size)
@@ -95,6 +92,7 @@ def main():
             print(f"The price for your {size} smoothie is ${cost:.2f}")
             # blend(size, base, fruit, scoops)
         # main_is_running = False  # Set to False to exit the loop after one iteration. Uncomment this line for testing.
+    print("Thank you for visiting the Smoothie Bar! Goodbye!")
 
 
 # Run the main function to start the program.
