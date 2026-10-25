@@ -10,3 +10,33 @@ ASSIGNMENT 10A: THE RESILIENT PIZZA ENGINE
 [ ] 6. main() calls the function using KEYWORD ARGUMENTS.
 -----------------------------------------------------------------------
 """
+
+# GLOBAL CONSTANTS (Pantry Rules - Visible to all)
+TOPPINGS = (
+    "pepperoni",
+    "mushrooms",
+    "onions",
+    "sausage",
+    "bacon",
+    "extra cheese",
+    "black olives",
+    "green peppers",
+    "pineapple",
+    "spinach",
+)
+
+
+def make_pizza(size, crust, toppings, is_delivery=False):
+    pass
+
+
+def main():
+    print("Welcome to the Resilient Pizza Engine!")
+    print("Available toppings:")
+    for topping in TOPPINGS:
+        print(f" - {topping}")
+
+    # make_pizza(size="large", crust="thin", toppings=["pepperoni", "mushrooms"], is_delivery=True)
+
+
+main()
