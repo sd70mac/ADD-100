@@ -31,14 +31,21 @@ def make_pizza(size, crust, toppings, is_delivery=False):
     pass
 
 
-def main():
-    print("Welcome to the Resilient Pizza Engine!")
+def print_available_toppings():
     print("Available toppings:")
     for topping in TOPPINGS:
         print(f" - {topping}")
 
 
-# make_pizza(size="large", crust="thin", toppings=["pepperoni", "mushrooms"], is_delivery=True)
-# pass
+def main():
+    print("Welcome to the Resilient Pizza Engine!")
+    print_available_toppings()
+    make_pizza(
+        size="large",
+        crust="thin",
+        toppings=["pepperoni", "mushrooms"],
+        is_delivery=True,
+    )
+
 
 main()
