@@ -37,7 +37,8 @@ def main():
     for topping in TOPPINGS:
         print(f" - {topping}")
 
-    # make_pizza(size="large", crust="thin", toppings=["pepperoni", "mushrooms"], is_delivery=True)
 
+# make_pizza(size="large", crust="thin", toppings=["pepperoni", "mushrooms"], is_delivery=True)
+# pass
 
 main()
