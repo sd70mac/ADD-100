@@ -37,8 +37,9 @@ def get_customer_info():
     Function to get customer information.
     Returns customer details.
     """
-    # 💡 TODO: Placeholder for actual implementation
-    return {"name": "John Doe"}
+    # 💡 TODO: Placeholder for actual implementation, still a Work In Progress.
+    name = input("Customer Name: ").title()
+    return {"name": name}
 
 
 def get_past_orders(customer_info):
