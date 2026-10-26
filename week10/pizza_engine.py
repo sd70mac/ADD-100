@@ -13,15 +13,16 @@ ASSIGNMENT 10A: THE RESILIENT PIZZA ENGINE
 
 # GLOBAL CONSTANTS (Pantry Rules - Visible to all)
 TOPPINGS = (
-    "pepperoni",
+    "anchovies",
+    "bacon",
+    "black olives",
+    "extra cheese",
+    "green peppers",
     "mushrooms",
     "onions",
-    "sausage",
-    "bacon",
-    "extra cheese",
-    "black olives",
-    "green peppers",
+    "pepperoni",
     "pineapple",
+    "sausage",
     "spinach",
 )
 
