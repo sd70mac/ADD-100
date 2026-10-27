@@ -49,20 +49,18 @@ def make_pizza(customer, size, crust, toppings, is_delivery=False):
     """
     print(f"For customer {customer}:")
     print(f"Making a {size} pizza with {crust} crust and the following toppings:")
-    for topping in toppings:
-        print(f" - {topping}")
+    print_toppings(toppings)
     if is_delivery:
         print("This pizza will be delivered to your address.")
     else:
         print("This pizza will be picked up at the store.")
 
 
-def print_available_toppings():
+def print_toppings(toppings_list=TOPPINGS):
     """
-    A helper function to print the available toppings from the global constant TOPPINGS.
+    A helper function to print toppings. It defaults to printing from the global constant TOPPINGS, if no list is provided.
     """
-    print("Available toppings:")
-    for topping in TOPPINGS:
+    for topping in toppings_list:
         print(f" - {topping}")
 
 
@@ -71,7 +69,8 @@ def main():
     The Main function to run the pizza engine.  This function will get customer info, display available toppings, and make a pizza.
     """
     print("Welcome to the Resilient Pizza Engine!")
-    print_available_toppings()
+    print("Available toppings:")
+    print_toppings()
     customer_info = get_customer_info()
     make_pizza(
         customer=customer_info["name"],
