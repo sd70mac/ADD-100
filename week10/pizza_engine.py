@@ -11,6 +11,8 @@ ASSIGNMENT 10A: THE RESILIENT PIZZA ENGINE
 -----------------------------------------------------------------------
 """
 
+import sys  # I've used import statements in the past.
+
 # GLOBAL CONSTANTS (Pantry Rules - Visible to all)
 TOPPINGS = (
     "anchovies",
@@ -89,7 +91,7 @@ def main():
         customer=customer_info["name"],
         size="large",
         crust="thin",
-        toppings=["pepperoni", "mushrooms"],
+        topping="pepperoni",
         is_delivery=True,
     )
 
