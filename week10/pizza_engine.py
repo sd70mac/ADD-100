@@ -32,7 +32,13 @@ def get_customer_info():
     A function to get customer information.
     Returns customer details.
     """
-    name = input("Customer Name: ").title()
+    try:
+        name = input("Customer Name: ").title()
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user.")
+        return {"name": "Guest"}
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
     return {"name": name}
 
 
