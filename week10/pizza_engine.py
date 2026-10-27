@@ -39,14 +39,14 @@ def get_customer_info():
         return {"name": "Guest"}
     except KeyboardInterrupt:
         print("\nOperation cancelled by user.")
-        exit(1)
+        sys.exit(1)
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
-        exit(e)
+        sys.exit(e)
     return {"name": name}
 
 
-def make_pizza(customer, size, crust, toppings, is_delivery=False):
+def make_pizza(customer, size, crust, topping, is_delivery=False):
     """
     A function to make a pizza with the given parameters.
     Currently simply prints the pizza details.
@@ -54,12 +54,12 @@ def make_pizza(customer, size, crust, toppings, is_delivery=False):
     :param customer: The customer's name.
     :param size: The pizza size.
     :param crust: The type of crust.
-    :param toppings: A list of selected toppings.
+    :param topping: The selected topping.
     :param is_delivery: Whether the pizza should be delivered.
     """
     print(f"For customer {customer}:")
-    print(f"Making a {size} pizza with {crust} crust and the following toppings:")
-    print_toppings(toppings)
+    print(f"Making a {size} pizza with {crust} crust and the following topping:")
+    print_toppings([topping])
     if is_delivery:
         print("This pizza will be delivered to your address.")
     else:
