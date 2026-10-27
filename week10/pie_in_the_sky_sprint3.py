@@ -34,11 +34,20 @@ def get_items_for_category(category, available_items):
 
 def get_customer_info():
     """
-    Function to get customer information.
-    Returns customer details.
+    A function to get customer information.
+    No arguments are passed to this function, and it returns a dictionary with customer information details.
     """
-    # 💡 TODO: Placeholder for actual implementation, still a Work In Progress.
-    name = input("Customer Name: ").title()
+    try:
+        name = input("Customer Name: ").title()
+    except ValueError:
+        print("Invalid input. Continuing as Guest.")
+        return {"name": "Guest"}
+    except KeyboardInterrupt:
+        print("\nOperation cancelled by user.")
+        sys.exit(1)
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+        sys.exit(e)
     return {"name": name}
 
 
