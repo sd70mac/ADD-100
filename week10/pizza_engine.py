@@ -27,20 +27,48 @@ TOPPINGS = (
 )
 
 
-def make_pizza(size, crust, toppings, is_delivery=False):
-    pass
+def get_customer_info():
+    """
+    A function to get customer information.
+    Returns customer details.
+    """
+    name = input("Customer Name: ").title()
+    return {"name": name}
+
+
+def make_pizza(customer, size, crust, toppings, is_delivery=False):
+    """
+    A function to make a pizza with the given parameters.
+    Currently simply prints the pizza details.
+    """
+    print(f"For customer {customer}:")
+    print(f"Making a {size} pizza with {crust} crust and the following toppings:")
+    for topping in toppings:
+        print(f" - {topping}")
+    if is_delivery:
+        print("This pizza will be delivered to your address.")
+    else:
+        print("This pizza will be picked up at the store.")
 
 
 def print_available_toppings():
+    """
+    A helper function to print the available toppings from the global constant TOPPINGS.
+    """
     print("Available toppings:")
     for topping in TOPPINGS:
         print(f" - {topping}")
 
 
 def main():
+    """
+    The Main function to run the pizza engine.  This function will get customer info, display available toppings, and make a pizza.
+    """
     print("Welcome to the Resilient Pizza Engine!")
     print_available_toppings()
+    customer_info = get_customer_info()
     make_pizza(
+        customer=customer_info["name"],
         size="large",
         crust="thin",
         toppings=["pepperoni", "mushrooms"],
