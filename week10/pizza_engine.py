@@ -78,6 +78,25 @@ def print_toppings(toppings_list=TOPPINGS):
         print(f" - {topping}")
 
 
+def topping_selection():
+    """
+    A function to allow the user to select a topping from the available toppings.
+    Returns the selected topping.
+    No arguments are passed to this function, it returns the selected topping.
+    """
+    while True:
+        try:
+            topping_choice = int(input("Select a topping by number: "))
+            if 1 <= topping_choice <= len(TOPPINGS):
+                return TOPPINGS[topping_choice - 1]
+            print(f"Please enter a number from 1 to {len(TOPPINGS)}.")
+        except ValueError:
+            print("Invalid input. Please enter a topping number.")
+        except KeyboardInterrupt:
+            print("\nOperation cancelled by user.")
+            sys.exit(1)
+
+
 def main():
     """
     The Main function to run the pizza engine.  This function will get customer info, display available toppings, and make a pizza.
@@ -85,13 +104,16 @@ def main():
     """
     print("Welcome to the Resilient Pizza Engine!")
     print("Available toppings:")
-    print_toppings()
+    for index, topping in enumerate(TOPPINGS, start=1):
+        print(f" {index}. {topping}")
+
+    topping = topping_selection()
     customer_info = get_customer_info()
     make_pizza(
         customer=customer_info["name"],
         size="large",
         crust="thin",
-        topping="pepperoni",
+        topping=topping,
         is_delivery=True,
     )
 
