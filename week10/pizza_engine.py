@@ -30,15 +30,19 @@ TOPPINGS = (
 def get_customer_info():
     """
     A function to get customer information.
-    Returns customer details.
+    No arguments are passed to this function, and it returns a dictionary with customer information details.
     """
     try:
         name = input("Customer Name: ").title()
+    except ValueError:
+        print("Invalid input. Continuing as Guest.")
+        return {"name": "Guest"}
     except KeyboardInterrupt:
         print("\nOperation cancelled by user.")
-        return {"name": "Guest"}
+        exit(1)
     except Exception as e:
         print(f"An unexpected error occurred: {e}")
+        exit(e)
     return {"name": name}
 
 
@@ -46,6 +50,12 @@ def make_pizza(customer, size, crust, toppings, is_delivery=False):
     """
     A function to make a pizza with the given parameters.
     Currently simply prints the pizza details.
+
+    :param customer: The customer's name.
+    :param size: The pizza size.
+    :param crust: The type of crust.
+    :param toppings: A list of selected toppings.
+    :param is_delivery: Whether the pizza should be delivered.
     """
     print(f"For customer {customer}:")
     print(f"Making a {size} pizza with {crust} crust and the following toppings:")
@@ -59,6 +69,8 @@ def make_pizza(customer, size, crust, toppings, is_delivery=False):
 def print_toppings(toppings_list=TOPPINGS):
     """
     A helper function to print toppings. It defaults to printing from the global constant TOPPINGS, if no list is provided.
+
+    :param toppings_list: A list of toppings to print.
     """
     for topping in toppings_list:
         print(f" - {topping}")
@@ -67,6 +79,7 @@ def print_toppings(toppings_list=TOPPINGS):
 def main():
     """
     The Main function to run the pizza engine.  This function will get customer info, display available toppings, and make a pizza.
+    Main is the entry point of the program, and does not receive any arguments.
     """
     print("Welcome to the Resilient Pizza Engine!")
     print("Available toppings:")
