@@ -32,7 +32,12 @@ while True:
                 "Status:": description,
                 "Priority:": priority,
             }
-            print(dict_entry)
+            bug_log.write(f"""{dict_entry['Timestamp:']}
+            File: {dict_entry['File:']}
+            Status: {dict_entry['Status:']}
+            Priority: {dict_entry['Priority:']}
+            --------------------------------------------------""")
+
         print("Bug log updated!")
 
 
