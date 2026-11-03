@@ -17,7 +17,11 @@ TAX_RATE = 0.05  # Global constant for the tax rate (5%)
 
 def process_expenses(item_name, price, quantity):
     """
-    Returns TWO values (total, status).
+    Returns TWO values (total, msg). While total is a fairly self-explanatory float, msg is a string.
+    :param item_name: Name of the item.
+    :param price: Price of the item.
+    :param quantity: Quantity of the item.
+    :return: Tuple containing total cost and status message.
 
     """
 
