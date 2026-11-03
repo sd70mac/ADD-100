@@ -15,7 +15,7 @@ OFFICE_NAME = "The Office"  # Global constant for the office name
 TAX_RATE = 0.05  # Global constant for the tax rate (5%)
 
 
-def process_expenses(base_price, is_vip):
+def process_expenses(item_name, price, quantity):
     """
     Returns TWO values (total, status).
 
