@@ -60,6 +60,10 @@ def main():
         print("Invalid input. Defaulting to 1.00")
         user_price = 1.00
 
+    processed_total, status_message = process_expenses(
+        item_name="Sample Item", price=user_price, quantity=int(quantity)
+    )
+
     # UNPACKING the two returned values
     final_cost, status_txt = calculate_result(base_price=user_price, is_vip=False)
 
