@@ -16,7 +16,9 @@ timestamp = datetime.datetime.now()
 # 💡 TODO: create a while loop that will ask the user for information to generate a log
 while True:
     pass
-
+print("Enter 'log' to record a bug, or 'quit' to stop: ", end="")
+user_input = input().strip().lower()
+print("Bug log updated!")
 """
 Expected output:
 Enter 'log' to record a bug, or 'quit' to stop: log
