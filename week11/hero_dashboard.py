@@ -63,6 +63,7 @@ def main():
                 "Quantity must be an integer. Please enter a whole number, such as 1."
             )
 
+    user_price = ""
     while user_price == "":
         try:
             user_price = float(input("Enter order price: "))
@@ -70,14 +71,13 @@ def main():
             print("Invalid input. Defaulting to 1.00")
             user_price = 1.00
 
-    while True:
+    vip_response = ""
+    while vip_response == "":
         vip_response = input("Is this a VIP order? (Y/Yes or N/No): ").strip().lower()
         if vip_response in ("y", "yes"):
             is_vip = True
-            break
         if vip_response in ("n", "no"):
             is_vip = False
-            break
         print("Please enter Y/Yes or N/No.")
 
     processed_total, status_message = process_expenses(
