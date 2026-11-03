@@ -51,6 +51,7 @@ def main():
     quantity = ""
     while quantity == "":
         quantity = input("Please enter the quantity: ")
+        quantity = int(quantity)
         while not quantity.isdigit():
             print("Error: Quantity cannot be blank. Quantity must be an integer.")
             quantity = input("Please enter the quantity: ")
@@ -61,7 +62,7 @@ def main():
         user_price = 1.00
 
     processed_total, status_message = process_expenses(
-        item_name="Sample Item", price=user_price, quantity=int(quantity)
+        item_name="Sample Item", price=user_price, quantity=quantity
     )
 
     # UNPACKING the two returned values
