@@ -15,8 +15,23 @@ OFFICE_NAME = "The Office"  # Global constant for the office name
 TAX_RATE = 0.05  # Global constant for the tax rate (5%)
 
 
+def process_expenses(base_price, is_vip):
+    """
+    Returns TWO values (total, status).
+
+    """
+
+    # Determine a string status based on logic
+    msg = "VIP Order" if is_vip else "Standard Order"
+
+    return total, msg  # Multiple Return
+
+
 def calculate_result(base_price, is_vip):
-    """Calculates tax and returns TWO values (total, status)."""
+    """Calculates tax and returns TWO values (total, status).
+    :param base_price: The base price of the order.
+    :param is_vip: Boolean indicating if the order is VIP.
+    :return: Tuple containing total cost and status message."""
     tax = base_price * TAX_RATE
     total = base_price + tax
 
@@ -27,6 +42,13 @@ def calculate_result(base_price, is_vip):
 
 
 def main():
+    print(f"Welcome to {OFFICE_NAME} Expense Dashboard")
+    quantity = ""
+    while quantity == "":
+        quantity = input("Please enter the quantity: ")
+        while not quantity.isdigit():
+            print("Error: Quantity cannot be blank. Quantity must be an integer.")
+            quantity = input("Please enter the quantity: ")
     try:
         user_price = float(input("Enter order price: "))
     except ValueError:
