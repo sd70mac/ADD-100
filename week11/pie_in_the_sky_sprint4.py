@@ -6,6 +6,7 @@ Developer: John George
 
 # GLOBAL CONSTANTS (Pantry Rules)
 MENU_FILE = "menu.txt"  # Path to the menu file, I may rename this later.
+ORDER_FILE = "orders.csv"  # Path to the orders file, I may rename this later.
 # Docstrings can get pulled into documentation, unlike regular comments.
 """
 The menu file to contain the following sections: "Appetizers", "Entrees", "Drinks", "Desserts"
