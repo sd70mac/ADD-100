@@ -10,3 +10,6 @@ ASSIGNMENT 11A: THE OFFICE HERO DASHBOARD
 [ ] 6. main() correctly unpacks and prints both return values.
 -----------------------------------------------------------------------
 """
+
+OFFICE_NAME = "The Office"  # Global constant for the office name
+TAX_RATE = 0.07  # Global constant for the tax rate (7%)
