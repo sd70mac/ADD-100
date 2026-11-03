@@ -58,10 +58,12 @@ def main():
             quantity = int(input("Please enter the quantity: "))
             if quantity < 0:
                 print("Quantity must be a positive integer.")
+                quantity = ""
         except ValueError:
             print(
                 "Quantity must be an integer. Please enter a whole number, such as 1."
             )
+            quantity = ""
 
     user_price = ""
     while user_price == "":
@@ -73,11 +75,15 @@ def main():
 
     vip_response = ""
     while vip_response == "":
-        vip_response = input("Is this a VIP order? (Y/Yes or N/No): ").strip().lower()
+        vip_response = (
+            input("Is this a VIP order? Please enter (Y/Yes or N/No): ").strip().lower()
+        )
         if vip_response in ("y", "yes"):
             is_vip = True
-        if vip_response in ("n", "no"):
+            break
+        elif vip_response in ("n", "no"):
             is_vip = False
+            break
         print("Please enter Y/Yes or N/No.")
 
     processed_total, status_message = process_expenses(
@@ -86,6 +92,7 @@ def main():
 
     # UNPACKING the two returned values
     final_cost, status_txt = calculate_result(base_price=processed_total, is_vip=is_vip)
+    print(f"\n{status_message}")
     print(f"\nProcessed Total: ${processed_total:.2f}")
     print(f"\nFinal Receipt: ${final_cost:.2f}")
     print(f"Order Type: {status_txt}")
