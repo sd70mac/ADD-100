@@ -51,10 +51,11 @@ def main():
     quantity = ""
     while quantity == "":
         quantity = input("Please enter the quantity: ")
-        quantity = int(quantity)
         while not quantity.isdigit():
             print("Error: Quantity cannot be blank. Quantity must be an integer.")
             quantity = input("Please enter the quantity: ")
+    quantity = int(quantity)
+
     try:
         user_price = float(input("Enter order price: "))
     except ValueError:
