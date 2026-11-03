@@ -25,7 +25,7 @@ while True:
             file_name = input("File name: ")
             description = input("Description of error: ")
             priority = input("Priority (High, Medium, Low): ")
-            bug_log.write(f"[{timestamp}]")
+            bug_log.write(f"[{timestamp.strftime('%Y-%m-%d %H:%M:%S')}]\n")
         print("Bug log updated!")
 
 
