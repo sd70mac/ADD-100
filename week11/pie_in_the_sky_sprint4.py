@@ -54,6 +54,7 @@ def get_customer_info():
 def get_past_orders(customer_info):
     """Retrieve the available past orders."""
     # 💡 TODO: Placeholder for actual implementation
+    # I will need to have some past orders stored in a file or database to retrieve them. For now, I will return an empty list.
     return []
 
 
@@ -74,6 +75,7 @@ def get_popular_orders():
     """Return the most popular orders."""
     print("Here are the most popular orders:")
     # 💡 TODO: Placeholder for actual implementation
+    # I will need to have some popular orders stored in a file or database to retrieve them. For now, I will return an empty list.
     return []
 
 
