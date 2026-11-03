@@ -25,8 +25,9 @@ while True:
             file_name = input("File name: ")
             description = input("Description of error: ")
             priority = input("Priority (High, Medium, Low): ")
-            bug_log.write(f"[{timestamp.strftime('%Y-%m-%d %H:%M:%S')}]\n")
+            # bug_log.write(f"[{timestamp.strftime('%Y-%m-%d %H:%M:%S')}]\n")
             dict_entry = {
+                "Timestamp:": timestamp.strftime("%Y-%m-%d %H:%M:%S"),
                 "File:": file_name,
                 "Status:": description,
                 "Priority:": priority,
