@@ -53,12 +53,13 @@ def main():
     """
     print(f"Welcome to {OFFICE_NAME} Expense Dashboard")
     quantity = ""
-    while quantity == "":
-        quantity = input("Please enter the quantity: ")
-        while not quantity.isdigit():
-            print("Error: Quantity cannot be blank. Quantity must be an integer.")
-            quantity = input("Please enter the quantity: ")
-    quantity = int(quantity)
+    try:
+        quantity = int(input("Please enter the quantity: "))
+        if quantity <= 0:
+            print("Quantity cannot be must be greater than zero.")
+            continue
+        except ValueError:
+            print("Quantity must be an integer. Please enter a whole number, such as 1.")   
 
     try:
         user_price = float(input("Enter order price: "))
@@ -85,7 +86,7 @@ def main():
     )
 
     # UNPACKING the two returned values
-    final_cost, status_txt = calculate_result(base_price=processed_total, is_vip=False)
+    final_cost, status_txt = calculate_result(base_price=processed_total, is_vip=is_vip)
 
     print(f"\nFinal Receipt: ${final_cost:.2f}")
     print(f"Order Type: {status_txt}")
