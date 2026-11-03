@@ -70,8 +70,9 @@ def main():
         item_name="Sample Item", price=user_price, quantity=quantity
     )
 
+
     # UNPACKING the two returned values
-    final_cost, status_txt = calculate_result(base_price=user_price, is_vip=False)
+    final_cost, status_txt = calculate_result(base_price=processed_total, is_vip=False)
 
     print(f"\nFinal Receipt: ${final_cost:.2f}")
     print(f"Order Type: {status_txt}")
