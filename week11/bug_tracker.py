@@ -20,8 +20,14 @@ while True:
     if user_input == "quit":
         break
     elif user_input == "log":
+        with open("bug_log.txt", "a") as bug_log:
+            timestamp = datetime.datetime.now()
+            file_name = input("File name: ")
+            description = input("Description of error: ")
+            priority = input("Priority (High, Medium, Low): ")
+            bug_log.write(f"[{timestamp}]")
         print("Bug log updated!")
-        pass
+
 
 """
 Expected output:
