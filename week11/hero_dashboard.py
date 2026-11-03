@@ -50,7 +50,7 @@ def main():
     """
     Main function to run the expense dashboard.
     No parameters or return values.
-    """"
+    """
     print(f"Welcome to {OFFICE_NAME} Expense Dashboard")
     quantity = ""
     while quantity == "":
@@ -65,17 +65,31 @@ def main():
     except ValueError:
         print("Invalid input. Defaulting to 1.00")
         user_price = 1.00
+    
+    while True:
+        vip_response = input("Is this a VIP order? (Y/Yes or N/No): ").strip().lower()
+        if vip_response in ("y", "yes"):
+            is_vip = True
+            break
+        if vip_response in ("n", "no"):
+            is_vip = False
+            break
+        print("Please enter Y/Yes or N/No.")
+        else:
+            print("Invalid input. Defaulting to Standard Order.")
+            is_vip = False
+            break
 
     processed_total, status_message = process_expenses(
         item_name="Sample Item", price=user_price, quantity=quantity
     )
-
 
     # UNPACKING the two returned values
     final_cost, status_txt = calculate_result(base_price=processed_total, is_vip=False)
 
     print(f"\nFinal Receipt: ${final_cost:.2f}")
     print(f"Order Type: {status_txt}")
+
 
 # Run the main program.
 main()
