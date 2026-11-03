@@ -55,11 +55,11 @@ def main():
     quantity = ""
     try:
         quantity = int(input("Please enter the quantity: "))
-        if quantity <= 0:
-            print("Quantity cannot be must be greater than zero.")
-            continue
-        except ValueError:
-            print("Quantity must be an integer. Please enter a whole number, such as 1.")   
+        if quantity > 0:
+            break
+        print("Quantity must be greater than zero.")
+    except ValueError:
+        print("Quantity must be an integer. Please enter a whole number, such as 1.")   
 
     try:
         user_price = float(input("Enter order price: "))
