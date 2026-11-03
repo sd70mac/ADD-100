@@ -63,11 +63,12 @@ def main():
                 "Quantity must be an integer. Please enter a whole number, such as 1."
             )
 
-    try:
-        user_price = float(input("Enter order price: "))
-    except ValueError:
-        print("Invalid input. Defaulting to 1.00")
-        user_price = 1.00
+    while user_price == "":
+        try:
+            user_price = float(input("Enter order price: "))
+        except ValueError:
+            print("Invalid input. Defaulting to 1.00")
+            user_price = 1.00
 
     while True:
         vip_response = input("Is this a VIP order? (Y/Yes or N/No): ").strip().lower()
