@@ -59,14 +59,14 @@ def main():
             break
         print("Quantity must be greater than zero.")
     except ValueError:
-        print("Quantity must be an integer. Please enter a whole number, such as 1.")   
+        print("Quantity must be an integer. Please enter a whole number, such as 1.")
 
     try:
         user_price = float(input("Enter order price: "))
     except ValueError:
         print("Invalid input. Defaulting to 1.00")
         user_price = 1.00
-    
+
     while True:
         vip_response = input("Is this a VIP order? (Y/Yes or N/No): ").strip().lower()
         if vip_response in ("y", "yes"):
@@ -76,10 +76,6 @@ def main():
             is_vip = False
             break
         print("Please enter Y/Yes or N/No.")
-        else:
-            print("Invalid input. Defaulting to Standard Order.")
-            is_vip = False
-            break
 
     processed_total, status_message = process_expenses(
         item_name="Sample Item", price=user_price, quantity=quantity
