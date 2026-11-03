@@ -47,6 +47,10 @@ def calculate_result(base_price, is_vip):
 
 
 def main():
+    """
+    Main function to run the expense dashboard.
+    No parameters or return values.
+    """"
     print(f"Welcome to {OFFICE_NAME} Expense Dashboard")
     quantity = ""
     while quantity == "":
@@ -72,5 +76,5 @@ def main():
     print(f"\nFinal Receipt: ${final_cost:.2f}")
     print(f"Order Type: {status_txt}")
 
-
+# Run the main program.
 main()
