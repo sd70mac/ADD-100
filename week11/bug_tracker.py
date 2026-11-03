@@ -31,6 +31,7 @@ while True:
                 "Status:": description,
                 "Priority:": priority,
             }
+            print(dict_entry)
         print("Bug log updated!")
 
 
