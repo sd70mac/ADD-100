@@ -55,10 +55,8 @@ def main():
     quantity = ""
     try:
         quantity = int(input("Please enter the quantity: "))
-        if quantity > 0:
-            pass
-        else:
-            print("Quantity must be greater than zero.")
+        if quantity < 0:
+            print("Quantity must be a positive integer.")
     except ValueError:
         print("Quantity must be an integer. Please enter a whole number, such as 1.")
 
