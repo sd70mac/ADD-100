@@ -24,7 +24,7 @@ def process_expenses(item_name, price, quantity):
     :return: Tuple containing total cost and status message.
 
     """
-
+    total = price * quantity
     # Determine a string status based on logic
     msg = "VIP Order" if is_vip else "Standard Order"
 
