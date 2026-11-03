@@ -27,7 +27,7 @@ def process_expenses(item_name, price, quantity):
 
     total = price * quantity
     # Determine a string status based on logic
-    msg = "VIP Order" if is_vip else "Standard Order"
+    msg = item_name
 
     return total, msg  # Multiple Return
 
