@@ -102,6 +102,21 @@ def print_bill(order, total):
     pass
 
 
+def open_order_file(order, total):
+    """Open the order file for writing."""
+    try:
+        with open(ORDER_FILE, "a") as orders:
+            orders.write(f"Order: {order}, Total: ${total:.2f}\n")
+            # I will change this later, this is just a demo.
+            pass
+    except FileNotFoundError:
+        print(f"Error: The file {ORDER_FILE} was not found.")
+    except IOError:
+        print(f"Error: An I/O error occurred while trying to open {ORDER_FILE}.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+
+
 # I hope I'm doing this right.
 # I know I need to call the functions in main() so that they actually run!
 def main():
