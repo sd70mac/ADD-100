@@ -87,7 +87,7 @@ def main():
 
     # UNPACKING the two returned values
     final_cost, status_txt = calculate_result(base_price=processed_total, is_vip=is_vip)
-
+    print(f"\nProcessed Total: ${processed_total:.2f}")
     print(f"\nFinal Receipt: ${final_cost:.2f}")
     print(f"Order Type: {status_txt}")
 
