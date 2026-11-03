@@ -53,12 +53,15 @@ def main():
     """
     print(f"Welcome to {OFFICE_NAME} Expense Dashboard")
     quantity = ""
-    try:
-        quantity = int(input("Please enter the quantity: "))
-        if quantity < 0:
-            print("Quantity must be a positive integer.")
-    except ValueError:
-        print("Quantity must be an integer. Please enter a whole number, such as 1.")
+    while quantity == "":
+        try:
+            quantity = int(input("Please enter the quantity: "))
+            if quantity < 0:
+                print("Quantity must be a positive integer.")
+        except ValueError:
+            print(
+                "Quantity must be an integer. Please enter a whole number, such as 1."
+            )
 
     try:
         user_price = float(input("Enter order price: "))
