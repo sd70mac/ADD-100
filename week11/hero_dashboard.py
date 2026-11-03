@@ -27,7 +27,7 @@ def process_expenses(item_name, price, quantity):
 
     total = price * quantity
     # Determine a string status based on logic
-    msg = item_name
+    msg = f"Total for {item_name}: ${total:.2f}"
 
     return total, msg  # Multiple Return
 
