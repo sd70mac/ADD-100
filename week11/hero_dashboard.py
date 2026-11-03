@@ -12,4 +12,32 @@ ASSIGNMENT 11A: THE OFFICE HERO DASHBOARD
 """
 
 OFFICE_NAME = "The Office"  # Global constant for the office name
-TAX_RATE = 0.07  # Global constant for the tax rate (7%)
+TAX_RATE = 0.05  # Global constant for the tax rate (5%)
+
+
+def calculate_result(base_price, is_vip):
+    """Calculates tax and returns TWO values (total, status)."""
+    tax = base_price * TAX_RATE
+    total = base_price + tax
+
+    # Determine a string status based on logic
+    msg = "VIP Order" if is_vip else "Standard Order"
+
+    return total, msg  # Multiple Return
+
+
+def main():
+    try:
+        user_price = float(input("Enter order price: "))
+    except ValueError:
+        print("Invalid input. Defaulting to 1.00")
+        user_price = 1.00
+
+    # UNPACKING the two returned values
+    final_cost, status_txt = calculate_result(base_price=user_price, is_vip=False)
+
+    print(f"\nFinal Receipt: ${final_cost:.2f}")
+    print(f"Order Type: {status_txt}")
+
+
+main()
