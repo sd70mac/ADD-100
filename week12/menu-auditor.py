@@ -20,10 +20,30 @@ def read_menu():
             for line in file:
                 category, detail = line.strip().split(":", 1)
                 menus[category.strip()] = detail.strip()
+        return menus
     except FileNotFoundError:
         print('Could not find "menu_config.txt". Please create it or check its name.')
+    except IndexError:
+        return menus  # this handles blank lines in the text file
+    except Exception as e:
+        print(e)
 
-    return menus
+
+def split_into_variables(menu_items):
+    coffee = menu_items.get("COFFEE")
+    prices = menu_items.get("PRICES")
+    milks = menu_items.get("MILK")
+    flavors = menu_items.get("FLAVORS")
+    shots = menu_items.get("SHOTS")
+    return coffee, prices, milks, flavors, shots
+
+
+def print_menu(coffee, prices, milks, flavors, shots):
+    """This section deliberately incomplete"""
+    print("Coffee\n")
+    coffee_item = coffee.split(",")
+    for item in coffee_item:
+        print(f"\t{item.strip()}")
 
 
 def main():
