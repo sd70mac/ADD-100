@@ -47,7 +47,9 @@ def print_menu(coffee, prices, milks, flavors, shots):
 
 
 def main():
-    read_menu()
+    menu_items = read_menu()
+    coffee, prices, milks, flavors, shots = split_into_variables(menu_items)
+    print_menu(coffee, prices, milks, flavors, shots)
 
 
 main()
