@@ -1,0 +1,2 @@
+PIES : Mince, Custard, Shepherds', Chicken, Beef, Pork, Wild, Fish, Redberry, Apple, Blueberry, Admiral, Garden, Wilder, Summer, Mud
+DRINKS : Lemonade, Tea, Coffee, Coca-Cola, Pepsi, 7-Up, Dr. Pepper, Root Beer, Sprite, Fanta, Chocolate Milk
