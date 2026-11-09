@@ -12,32 +12,22 @@ ASSIGNMENT 12A: THE CONFIGURABLE MENU & AUDITOR
 """
 
 
-## Keep this the same.
-def get_menu_options():
-    menu = {}
-    while True:
-        print("Type 'Q' when done")
-        category = input(
-            "Please give me the category for this part of the menu: "
-        ).upper()
-        if category == "Q":
-            break
-        items = input("Please enter items separated by commas: ")
-        menu[category] = items
-    return menu
+def read_menu():
+    menus = {}
 
+    try:
+        with open("menu_config.txt", "r") as file:
+            for line in file:
+                category, detail = line.strip().split(":", 1)
+                menus[category.strip()] = detail.strip()
+    except FileNotFoundError:
+        print('Could not find "menu_config.txt". Please create it or check its name.')
 
-def save_to_file(menu):
-    with open("menu.txt", "a") as file:
-        all_items = menu.items()
-        for item in all_items:
-            output = f"{item[0]} : {item[1]}"
-            file.write(output + "\n")
+    return menus
 
 
 def main():
-    my_menu = get_menu_options()
-    save_to_file(my_menu)
+    read_menu()
 
 
 main()
