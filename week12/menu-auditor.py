@@ -43,11 +43,13 @@ def read_menu():
 ## For categ
 
 
- def print_menu(menu_items):
+def print_menu(menu_items):
     for category, detail in menu_items.items():
-        print(f"\n{category}:") 
+        print(f"\n{category}:")
         for item in details:
             print(f"\t{item}")
+
+
 """    print("Coffee\n")
     coffee_item = coffee.split(",")
     for item in coffee_item:
