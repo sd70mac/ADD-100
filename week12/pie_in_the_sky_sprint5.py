@@ -28,6 +28,8 @@ import os
 import sys
 import datetime
 
+# I am going to save splitting things up for the next sprint, as I need more guidance on doing so in a sane fashion that doesn't create chaos and confusion.
+
 
 def clear_screen():
     """Helper function to clear the console screen."""
