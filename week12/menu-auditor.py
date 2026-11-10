@@ -25,6 +25,7 @@ def read_menu():
         return menus
     except FileNotFoundError:
         print(f'Could not find "{MENUFILE}". Please create it or check its name.')
+        print("Press enter or any other key to exit.")
     except IndexError:
         return menus  # this handles blank lines in the text file
     except Exception as e:
@@ -40,21 +41,13 @@ def read_menu():
     return coffee, prices, milks, flavors, shots
  """
 
-## For categ
-
 
 def print_menu(menu_items):
     for category, details in menu_items.items():
         print(f"\n{category}:")
+        details = details.split(",")
         for item in details:
-            print(f"\t{item}")
-
-
-"""    print("Coffee\n")
-    coffee_item = coffee.split(",")
-    for item in coffee_item:
-        print(f"\t{item.strip()}")
-"""
+            print(f"\t{item.strip()}")
 
 
 def main():
@@ -63,9 +56,6 @@ def main():
     # print_menu(coffee, prices, milks, flavors, shots)
     if menu_items is not None:
         print_menu(menu_items)
-    print(
-        "Press enter or any other key to exit."
-    )  # Temporary instructions to make sure the user can quit.
 
 
 main()
