@@ -59,6 +59,8 @@ def main():
     menu_items = read_menu()
     # coffee, prices, milks, flavors, shots = split_into_variables(menu_items)
     # print_menu(coffee, prices, milks, flavors, shots)
+    if menu_items is not None:
+        print_menu(menu_items)
     print(
         "Press enter or any other key to exit."
     )  # Temporary instructions to make sure the user can quit.
