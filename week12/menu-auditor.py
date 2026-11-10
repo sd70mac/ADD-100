@@ -15,6 +15,7 @@ MENUFILE = "menu_config.txt"
 
 
 def read_menu():
+    # Read each category and its details from the menu configuration file.
     menus = {}
 
     try:
@@ -27,22 +28,13 @@ def read_menu():
         print(f'Could not find "{MENUFILE}". Please create it or check its name.')
         print("Press enter or any other key to exit.")
     except IndexError:
-        return menus  # this handles blank lines in the text file
+        return menus  # This handles blank lines in the text file
     except Exception as e:
         print(e)
 
 
-""" def split_into_variables(menu_items):
-    coffee = menu_items.get("COFFEE")
-    prices = menu_items.get("PRICES")
-    milks = menu_items.get("MILK")
-    flavors = menu_items.get("FLAVORS")
-    shots = menu_items.get("SHOTS")
-    return coffee, prices, milks, flavors, shots
- """
-
-
 def print_menu(menu_items):
+    # Display each menu category and its comma-separated items.
     for category, details in menu_items.items():
         print(f"\n{category}:")
         details = details.split(",")
@@ -51,9 +43,8 @@ def print_menu(menu_items):
 
 
 def main():
+    # Read the menu file, then print its contents if it was found.
     menu_items = read_menu()
-    # coffee, prices, milks, flavors, shots = split_into_variables(menu_items)
-    # print_menu(coffee, prices, milks, flavors, shots)
     if menu_items is not None:
         print_menu(menu_items)
 
