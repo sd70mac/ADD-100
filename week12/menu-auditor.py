@@ -40,8 +40,14 @@ def read_menu():
     return coffee, prices, milks, flavors, shots
  """
 
-""" def print_menu(coffee, prices, milks, flavors, shots):"""
-#    """This section deliberately incomplete"""
+## For categ
+
+
+ def print_menu(menu_items):
+    for category, detail in menu_items.items():
+        print(f"\n{category}:") 
+        for item in details:
+            print(f"\t{item}")
 """    print("Coffee\n")
     coffee_item = coffee.split(",")
     for item in coffee_item:
