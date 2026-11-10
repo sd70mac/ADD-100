@@ -15,7 +15,7 @@ MENUFILE = "menu_config.txt"
 
 
 def read_menu():
-    # Read each category and its details from the menu configuration file.
+    """Read each category and its details from the menu configuration file."""
     menus = {}
 
     try:
@@ -34,7 +34,7 @@ def read_menu():
 
 
 def print_menu(menu_items):
-    # Display each menu category and its comma-separated items.
+    """Display each menu category and its comma-separated items."""
     for category, details in menu_items.items():
         print(f"\n{category}:")
         details = details.split(",")
@@ -43,7 +43,7 @@ def print_menu(menu_items):
 
 
 def main():
-    # Read the menu file, then print its contents if it was found.
+    """Read the menu file, then print its contents if it was found."""
     menu_items = read_menu()
     if menu_items is not None:
         print_menu(menu_items)
