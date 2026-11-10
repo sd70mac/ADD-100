@@ -20,6 +20,14 @@ CATEGORIES = (
     "Desserts",
 )  # I don't know if I actually need this.  I'm keeping it for now. Let me know what you think!
 
+import os
+import datetime
+
+
+def clear_screen():
+    """Helper function to clear the console screen."""
+    _ = os.system("cls" if os.name == "nt" else "clear")
+
 
 def get_available_items(category):
     """Return a list of available items for the given category.
@@ -140,6 +148,7 @@ def main():
     """
     Main function to run the Pie in the Sky order process.
     No parameters are passed to this function, and it does not return any values."""
+    clear_screen()
     customer_info = get_customer_info()
     print(f"Welcome To Pie In The Sky, {customer_info['name']}!")
     past_orders = get_past_orders(customer_info=customer_info)
