@@ -7,6 +7,10 @@ Developer: John George
 # GLOBAL CONSTANTS (Pantry Rules)
 MENU_FILE = "menu.txt"  # Path to the menu file, I may rename this later.
 ORDER_FILE = "orders.csv"  # Path to the orders file, I may rename this later.
+RECEIPT_LOG_FILE = (
+    "receipts.log"  # Path to the receipts log file, also I may rename this later.
+)
+
 # Docstrings can get pulled into documentation, unlike regular comments.
 """
 The menu file to contain the following sections: "Appetizers", "Entrees", "Drinks", "Desserts"
@@ -21,6 +25,7 @@ CATEGORIES = (
 )  # I don't know if I actually need this.  I'm keeping it for now. Let me know what you think!
 
 import os
+import sys
 import datetime
 
 
@@ -104,8 +109,10 @@ def get_order():
     No arguments are passed to this function, and it returns a list of ordered items.
     :return: A list of ordered items.
     """
-    # 💡 TODO: Placeholder for actual implementation
-    return ["Item1", "Item2"]
+    # 💡 TODO: Placeholder for actual implementation, WIP
+    # order_input = input("Please enter your order (comma-separated): ")
+    order_input = "Cheddar Potato, Shepherds', Lemonade"
+    return [item.strip() for item in order_input.split(",")]
 
 
 def calculate_bill(order):
@@ -120,8 +127,23 @@ def print_bill(order, total):
     """Print the order and its total.
     :param order: A list of ordered items.
     :param total: The total cost of the order."""
-    print(f"Your order: {order}")
-    print(f"Total: ${total:.2f}")
+    timestamp = (
+        datetime.datetime.now()
+    )  # I had to move timestamp here because it was being called earlier than it was before.
+    order_str = f"Order: {order}, Total: ${total:.2f}, Timestamp: {timestamp}\n"
+    try:
+        with open(RECEIPT_LOG_FILE, "w") as orders:
+            orders.write(order_str)
+            # I will change this later, this is just a demo.
+            pass
+    except FileNotFoundError:
+        print(f"Error: The file {RECEIPT_LOG_FILE} was not found.")
+    except IOError:
+        print(f"Error: An I/O error occurred while trying to open {RECEIPT_LOG_FILE}.")
+    except Exception as e:
+        print(f"An unexpected error occurred: {e}")
+    print(order_str)
+
     pass
 
 
@@ -129,9 +151,14 @@ def open_order_file(order, total):
     """Open the order file for writing.
     :param order: A list of ordered items.
     :param total: The total cost of the order."""
+    timestamp = (
+        datetime.datetime.now()
+    )  # I had to move timestamp here because it was being called earlier than it was before.
+    order_str = f"Order: {order}, Total: ${total:.2f}, Timestamp: {timestamp}\n"
     try:
         with open(ORDER_FILE, "a") as orders:
-            orders.write(f"Order: {order}, Total: ${total:.2f}\n")
+            timestamp = datetime.datetime.now()
+            orders.write(order_str)
             # I will change this later, this is just a demo.
             pass
     except FileNotFoundError:
