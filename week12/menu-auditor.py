@@ -11,18 +11,20 @@ ASSIGNMENT 12A: THE CONFIGURABLE MENU & AUDITOR
 -----------------------------------------------------------------------
 """
 
+MYFILENAME = "menu_config.txt"
+
 
 def read_menu():
     menus = {}
 
     try:
-        with open("menu_config.txt", "r") as file:
+        with open(MYFILENAME, "r") as file:
             for line in file:
                 category, detail = line.strip().split(":", 1)
                 menus[category.strip()] = detail.strip()
         return menus
     except FileNotFoundError:
-        print('Could not find "menu_config.txt". Please create it or check its name.')
+        print(f'Could not find "{MYFILENAME}". Please create it or check its name.')
     except IndexError:
         return menus  # this handles blank lines in the text file
     except Exception as e:
