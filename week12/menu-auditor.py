@@ -20,8 +20,8 @@ def read_menu():
     try:
         with open(MENUFILE, "r") as file:
             for line in file:
-                category, detail = line.strip().split(":", 1)
-                menus[category.strip()] = detail.strip()
+                category, details = line.strip().split(":", 1)
+                menus[category.strip()] = details.strip()
         return menus
     except FileNotFoundError:
         print(f'Could not find "{MENUFILE}". Please create it or check its name.')
@@ -44,7 +44,7 @@ def read_menu():
 
 
 def print_menu(menu_items):
-    for category, detail in menu_items.items():
+    for category, details in menu_items.items():
         print(f"\n{category}:")
         for item in details:
             print(f"\t{item}")
