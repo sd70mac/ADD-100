@@ -22,13 +22,17 @@ CATEGORIES = (
 
 
 def get_available_items(category):
-    """Return a list of available items for the given category."""
+    """Return a list of available items for the given category.
+    :param category: The category of items to retrieve.
+    :return: A list of available items for the given category."""
     # 💡 TODO: Placeholder for actual implementation
     return []
 
 
 def get_items_for_category(category, available_items):
-    """Allow the user to select items from the available items for a category."""
+    """Allow the user to select items from the available items for a category.
+    :param category: The category of items to select from.
+    :param available_items: A list of available items for the given category."""
     # 💡 TODO: Placeholder for actual implementation
     return []
 
@@ -53,27 +57,33 @@ def get_customer_info():
 
 
 def get_past_orders(customer_info):
-    """Retrieve the available past orders."""
+    """Retrieve the available past orders.
+    :param customer_info: Dictionary containing customer information.
+    :return: A list of past orders for the given customer."""
     # 💡 TODO: Placeholder for actual implementation
     # I will need to have some past orders stored in a file or database to retrieve them. For now, I will return an empty list.
     return []
 
 
 def show_past_orders(past_orders):
-    """Display the available past orders."""
+    """Display the available past orders.
+    :param past_orders: A list of past orders to display."""
     print("Here are your past orders:")
     # 💡 TODO: actually display the past orders
     pass
 
 
 def select_past_order(past_orders):
-    """Allow the user to select a past order."""
+    """Allow the user to select a past order.
+    :param past_orders: A list of past orders to choose from.
+    :return: The selected past order or None if no order is selected."""
     # 💡 TODO: Placeholder for actual implementation
     return None
 
 
 def get_popular_orders():
-    """Return the most popular orders."""
+    """Return the most popular orders.
+    :return: A list of the most popular orders."""
     print("Here are the most popular orders:")
     # 💡 TODO: Placeholder for actual implementation
     # I will need to have some popular orders stored in a file or database to retrieve them. For now, I will return an empty list.
@@ -83,27 +93,34 @@ def get_popular_orders():
 def get_order():
     """
     Function to get the customer's order.
-    Returns a list of ordered items.
+    No arguments are passed to this function, and it returns a list of ordered items.
+    :return: A list of ordered items.
     """
     # 💡 TODO: Placeholder for actual implementation
     return ["Item1", "Item2"]
 
 
 def calculate_bill(order):
-    """Return the total for the order."""
+    """Return the total for the order.
+    :param order: A list of ordered items.
+    :return: The total cost of the order."""
     # 💡 TODO: Placeholder for actual implementation
     return 0.00
 
 
 def print_bill(order, total):
-    """Print the order and its total."""
+    """Print the order and its total.
+    :param order: A list of ordered items.
+    :param total: The total cost of the order."""
     print(f"Your order: {order}")
     print(f"Total: ${total:.2f}")
     pass
 
 
 def open_order_file(order, total):
-    """Open the order file for writing."""
+    """Open the order file for writing.
+    :param order: A list of ordered items.
+    :param total: The total cost of the order."""
     try:
         with open(ORDER_FILE, "a") as orders:
             orders.write(f"Order: {order}, Total: ${total:.2f}\n")
@@ -120,6 +137,9 @@ def open_order_file(order, total):
 # I hope I'm doing this right.
 # I know I need to call the functions in main() so that they actually run!
 def main():
+    """
+    Main function to run the Pie in the Sky order process.
+    No parameters are passed to this function, and it does not return any values."""
     customer_info = get_customer_info()
     print(f"Welcome To Pie In The Sky, {customer_info['name']}!")
     past_orders = get_past_orders(customer_info=customer_info)
@@ -140,4 +160,5 @@ def main():
     print_bill(order=order, total=total)
 
 
+## Run the main function when the file is executed
 main()
