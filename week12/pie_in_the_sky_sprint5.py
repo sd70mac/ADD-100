@@ -35,10 +35,23 @@ def clear_screen():
 
 
 def get_available_items(category):
-    """Return a list of available items for the given category.
+    """Read the menu file and return a list of available items for the given category.
     :param category: The category of items to retrieve.
     :return: A list of available items for the given category."""
-    # 💡 TODO: Placeholder for actual implementation
+    # 💡 TODO: Revise actual implementation, functional but not final.
+    try:
+        with open(MENU_FILE, "r") as menu_file:
+            for line in menu_file:
+                if ":" not in line:
+                    continue
+
+                menu_category, details = line.strip().split(":", 1)
+                if menu_category.strip().lower() == category.lower():
+                    return [item.strip() for item in details.split(",")]
+
+    except FileNotFoundError:
+        print(f"Error: The file {MENU_FILE} was not found.")
+
     return []
 
 
