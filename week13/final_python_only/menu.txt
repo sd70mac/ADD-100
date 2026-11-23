@@ -1,4 +1,10 @@
-PIES : Mince, Custard, Shepherds', Chicken, Beef, Pork, Wild, Fish, Redberry, Apple, Blueberry, Admiral, Garden, Wilder, Summer, Mud
-DRINKS : Lemonade, Tea, Coffee, Coca-Cola, Pepsi, 7-Up, Dr. Pepper, Root Beer, Sprite, Fanta, Chocolate Milk
-SANDWICHES : Ham and Cheese, Chicken Salad, Tuna Salad
-SOUPS : Minestrone, Tomato, Cheddar Potato
+# CHANGE LOG - no menu category
+# Replaced the old pie/drink/soup/sandwich-only draft with the complete
+# priced menu categories for appetizers, entrees, soups, sandwiches, pastas, and drinks.
+Appetizers: Bread ($2), Tarts ($2), Crackers ($2)
+Pies: Turkey Pot Pie ($12), Chicken Pot Pie ($12), Mince Pie ($12), Quiche ($12)
+Other Entrees: Cornish Pasty ($12), Bierock ($12)
+Soups: Tomato Soup ($8), Split Pea Soup ($8), Minestrone Soup ($8), Chicken Soup ($8)
+Sandwiches: Bacon Lettuce Tomato ($8), Ham with Cheese ($8), Ham without Cheese ($8), Turkey with Cheese ($8), Turkey without Cheese ($8), Chicken with Cheese ($8), Chicken without Cheese ($8), Hamburger with Cheese ($8), Hamburger without Cheese ($8), Peanut Butter and Jelly ($5)
+Pastas: Fettuccine Bolognese ($8), Pasta Primavera ($8), Fettuccine with Marinara Sauce ($8), Fettuccine with Marinara Sauce and Meatballs ($8), Fettuccine with White Sauce ($8)
+Drinks: Tea ($2), Coffee ($2), Decaf ($2), Lemonade ($2), Coca-Cola ($2), Pepsi ($2), Water ($2)

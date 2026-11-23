@@ -11,6 +11,14 @@ ASSIGNMENT 14A: Object practice
 -----------------------------------------------------------------------
 """
 
+"""
+CHANGE LOG:
+- Kept the existing Menu class interface and private attributes.
+- Replaced the old details-loop logic with list comprehension so comma-separated items
+  are trimmed and blank entries are removed.
+- Menu summary behavior and class setters/getters remain unchanged.
+"""
+
 
 # Will rename this file once I have a better idea of what to call it. For now, this is just a placeholder for the assignment.
 # Defining a menu category.
@@ -59,18 +67,17 @@ class Menu:
 
     def read_menu(self):
         """Read each category and its details from the menu configuration file."""
-        # menu = {}
-
         try:
             with open(self.__menu_file, "r") as file:
                 for line in file:
+                    if ":" not in line:
+                        continue
                     try:
                         category, details = line.strip().split(":", 1)
                         category = category.strip()
-                        details = details.split(",")
-                        for item in details:
-                            item = item.strip()
-                        self.__menu[category] = details
+                        self.__menu[category] = [
+                            item.strip() for item in details.split(",") if item.strip()
+                        ]
 
                     except IndexError:
                         pass  # This handles blank lines in the text file

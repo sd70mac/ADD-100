@@ -1,2 +1,4 @@
-PIES : Custard, Redberry, Apple, Blueberry, Mud
-OTHER DESSERTS : Vanilla Ice Cream, Mint Ice Cream, Baked Alaska, Brownie, Cheesecake
+# CHANGE LOG - no menu category
+# Replaced the old unpriced dessert-only draft with item prices.
+Pies: Custard ($12), Redberry ($12), Apple ($12), Blueberry ($12), Mud ($12)
+Other Desserts: Vanilla Ice Cream ($4), Mint Ice Cream ($4), Baked Alaska ($6), Brownie ($3), Cheesecake ($5)
